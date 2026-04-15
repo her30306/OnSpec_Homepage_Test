@@ -136,7 +136,7 @@ img {
     padding-top: 6px;
 }
 
-.has-dropdown:hover .dropdown {
+.has-dropdown.open .dropdown {
     display: block;
 }
 /* Invisible bridge over the gap so the mouse can reach the dropdown */

@@ -216,6 +216,16 @@
             });
         });
 
+        /* Desktop dropdown: open on mouseenter, close on mouseleave only */
+        document.querySelectorAll('.has-dropdown').forEach(function (item) {
+            item.addEventListener('mouseenter', function () {
+                item.classList.add('open');
+            });
+            item.addEventListener('mouseleave', function () {
+                item.classList.remove('open');
+            });
+        });
+
         /* ── Sub-nav active state ── */
         const subLinks = document.querySelectorAll('#subNav a');
         const sections = document.querySelectorAll('.page-section');
