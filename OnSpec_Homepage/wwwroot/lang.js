@@ -163,8 +163,8 @@ var TRANSLATIONS = {
         'biz-display-m5': 'OLED FMM AOI/AVI',
         'biz-display-f1': 'Largest domestic delivery record for TSP AOI',
         'biz-display-f2': 'Developed transparent ITO pattern inspection system impossible to inspect with the naked eye',
-        'biz-display-f3': 'Roll to Roll, Reel to Reel Non-Stop Feeding inspection system for 7\u03bcm circuits',
-        'biz-display-f4': 'Developed Fine Metal Mask 2D/3D inspection system with 0.7\u03bcm resolution'
+        'biz-display-f3': 'Roll to Roll, Reel to Reel Non-Stop Feeding inspection system for 7μm circuits',
+        'biz-display-f4': 'Developed Fine Metal Mask 2D/3D inspection system with 0.7μm resolution'
     }
 };
 
@@ -298,7 +298,10 @@ function initLang() {
 
     /* Auto-detect country via IP */
     fetch('https://ipapi.co/country/')
-        .then(function (res) { return res.text(); })
+        .then(function (res) {
+            if (!res.ok) { throw new Error('HTTP ' + res.status); }
+            return res.text();
+        })
         .then(function (country) {
             var lang = (country.trim() === 'KR') ? 'ko' : 'en';
             localStorage.setItem('lang', lang);
