@@ -34,6 +34,25 @@ var TRANSLATIONS = {
         'card-camera':        'Camera Module 외관검사기, 6면 동시검사, Laser Module 및 Lens 검사기',
         'card-display':       'COF/S-IC Reel to Reel AFVI, TSP AOI, 투명 ITO 패턴 AOI, OLED FMM AOI/AVI',
 
+        /* ── Sub-nav / section headings (about) ── */
+        'sub-profile':    '프로필',
+        'sub-orgchart':   '조직도',
+        'sub-location':   '오시는 길',
+        'sub-contact':    '연락처',
+
+        /* ── Sub-nav / section headings (business) ── */
+        'sub-battery':    '2차전지',
+        'sub-pcb':        'PCB, FPCB',
+        'sub-camera':     '카메라 모듈',
+        'sub-display':    '디스플레이',
+
+        /* ── Business section sub-headings ── */
+        'biz-h3-machine':   '장비',
+        'biz-h3-features':  '특징',
+
+        /* ── Contact label ── */
+        'label-contact':  '연락처',
+
         /* ── about.html ── */
         'profile-intro':      '㈜온스펙은 2006년부터 20년간 Vision 검사 분야에서 경험을 쌓아온 전문가들이 모여 설립한 기업으로 광학설계, S/W개발, 딥러닝을 이용한 Total 검사 솔루션 제공을 통해 고객의 가치에 기여하고자 합니다.',
         'label-company':      '업체명',
@@ -113,6 +132,25 @@ var TRANSLATIONS = {
         'card-pcb':           'PCB pattern inspection (AOI), appearance inspection (AVI), and Roll to Roll inspection systems.',
         'card-camera':        'Camera Module appearance inspection, 6-sided simultaneous inspection, Laser Module and Lens inspection.',
         'card-display':       'COF/S-IC Reel to Reel AFVI, TSP AOI, Transparent ITO Pattern AOI, OLED FMM AOI/AVI.',
+
+        /* ── Sub-nav / section headings (about) ── */
+        'sub-profile':    'Profile',
+        'sub-orgchart':   'Org Chart',
+        'sub-location':   'Location',
+        'sub-contact':    'Contact',
+
+        /* ── Sub-nav / section headings (business) ── */
+        'sub-battery':    'Battery',
+        'sub-pcb':        'PCB, FPCB',
+        'sub-camera':     'Camera Module',
+        'sub-display':    'Display',
+
+        /* ── Business section sub-headings ── */
+        'biz-h3-machine':   'Machine',
+        'biz-h3-features':  'Features',
+
+        /* ── Contact label ── */
+        'label-contact':  'Contact',
 
         /* ── about.html ── */
         'profile-intro':      'OnSpec Co., Ltd. was founded by experts with 20 years of experience in the Vision inspection field since 2006. We aim to contribute to customer value by providing Total inspection solutions encompassing optical design, S/W development, and deep learning.',
