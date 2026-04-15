@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <title>회사소개 - ㈜온스펙</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body data-page="about">
@@ -160,9 +163,16 @@
 
     <!-- ══ FOOTER ══════════════════════════════════════════════ -->
     <footer class="site-footer">
-        <p data-i18n="footer-addr">㈜온스펙 &nbsp;|&nbsp; 경기도 화성시 봉담읍 동화길51, 6층 669호</p>
-        <p data-i18n="footer-tel">TEL : 000-0000-0000 &nbsp;|&nbsp; kslee@on-spec.co.kr</p>
-        <p class="footer-copy">© 2026 OnSpec Co., Ltd. All rights reserved.</p>
+        <div class="footer-inner">
+            <div class="footer-info">
+                <p data-i18n="footer-addr">㈜온스펙 &nbsp;|&nbsp; 경기도 화성시 봉담읍 동화길51, 6층 669호</p>
+                <p data-i18n="footer-tel">TEL : 000-0000-0000 &nbsp;|&nbsp; kslee@on-spec.co.kr</p>
+                <p class="footer-copy">© 2026 OnSpec Co., Ltd. All rights reserved.</p>
+            </div>
+            <div class="footer-logo">
+                <a href="index.html"><img src="res/logo.png" alt="㈜온스펙"></a>
+            </div>
+        </div>
     </footer>
 
     <!-- Kakao Map SDK -->
@@ -170,25 +180,34 @@
             src="//dapi.kakao.com/v2/maps/sdk.js?appkey=194ebc2e518536d0afcc4bf7dd3fdeeb&libraries=services"></script>
 
     <script>
+        /* ── Scroll-based header ── */
+        (function () {
+            var header = document.querySelector('.site-header');
+            function onScroll() {
+                header.classList.toggle('scrolled', window.scrollY > 20);
+            }
+            window.addEventListener('scroll', onScroll, { passive: true });
+            onScroll();
+        })();
+
         /* ── Mobile menu ── */
-        const menuToggle = document.getElementById('menuToggle');
-        const mobileNav = document.getElementById('mobileNav');
+        var menuToggle = document.getElementById('menuToggle');
+        var mobileNav  = document.getElementById('mobileNav');
         menuToggle.addEventListener('click', function () {
             mobileNav.classList.toggle('open');
             menuToggle.classList.toggle('open');
         });
-
-        /* Close mobile nav when any nav link is tapped (same-page anchors) */
         mobileNav.querySelectorAll('a').forEach(function (link) {
             link.addEventListener('click', function () {
                 mobileNav.classList.remove('open');
                 menuToggle.classList.remove('open');
             });
         });
-        const subLinks = document.querySelectorAll('#subNav a');
-        const sections = document.querySelectorAll('.page-section');
 
-        const io = new IntersectionObserver(function (entries) {
+        /* ── Sub-nav active state ── */
+        var subLinks = document.querySelectorAll('#subNav a');
+        var sections = document.querySelectorAll('.page-section');
+        var io = new IntersectionObserver(function (entries) {
             entries.forEach(function (entry) {
                 if (entry.isIntersecting) {
                     var id = entry.target.getAttribute('id');
@@ -198,26 +217,21 @@
                 }
             });
         }, { rootMargin: '-130px 0px -55% 0px', threshold: 0 });
-
         sections.forEach(function (s) { io.observe(s); });
 
         /* ── Kakao Map ── */
         kakao.maps.load(function () {
             var container = document.getElementById('map-container');
             var geocoder = new kakao.maps.services.Geocoder();
-
             geocoder.addressSearch('경기도 화성시 봉담읍 동화길 51', function (result, status) {
                 var coords;
                 if (status === kakao.maps.services.Status.OK) {
                     coords = new kakao.maps.LatLng(result[0].y, result[0].x);
                 } else {
-                    /* fallback: approximate coords for 봉담읍 */
                     coords = new kakao.maps.LatLng(37.2098, 126.9062);
                 }
-
                 var map = new kakao.maps.Map(container, { center: coords, level: 3 });
                 var marker = new kakao.maps.Marker({ map: map, position: coords });
-
                 kakao.maps.event.addListener(marker, 'click', function () {
                     if (window.confirm(window.t('kakao-confirm'))) {
                         window.open(

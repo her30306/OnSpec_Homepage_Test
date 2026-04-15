@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <title>㈜온스펙 - Vision 검사 Total Solution</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body data-page="index">
@@ -74,6 +77,10 @@
         <!-- HERO -->
         <section class="hero">
             <div class="hero-inner">
+                <div class="hero-badge">
+                    <span class="hero-badge-dot"></span>
+                    <span data-i18n="hero-badge">Vision Inspection Technology</span>
+                </div>
                 <h1 data-i18n="hero-title">Vision 검사 <em>Total Solution</em><br>전문기업</h1>
                 <p data-i18n="hero-desc">
                     ㈜온스펙은 2006년부터 20년간 Vision 검사 분야에서 축적된 전문 기술력을 바탕으로<br>
@@ -86,26 +93,76 @@
             </div>
         </section>
 
+        <!-- STATS -->
+        <div class="stats">
+            <div class="stats-inner">
+                <div class="stat-item reveal">
+                    <div class="stat-num">20+</div>
+                    <div class="stat-label" data-i18n="stat-years">년 축적 경험</div>
+                </div>
+                <div class="stat-item reveal reveal-delay-1">
+                    <div class="stat-num">4</div>
+                    <div class="stat-label" data-i18n="stat-fields">핵심 사업 분야</div>
+                </div>
+                <div class="stat-item reveal reveal-delay-2">
+                    <div class="stat-num">A.I.</div>
+                    <div class="stat-label" data-i18n="stat-ai">딥러닝 검사 기술</div>
+                </div>
+                <div class="stat-item reveal reveal-delay-3">
+                    <div class="stat-num">100%</div>
+                    <div class="stat-label" data-i18n="stat-solution">맞춤형 검사 솔루션</div>
+                </div>
+            </div>
+        </div>
+
         <!-- OVERVIEW -->
         <section class="overview">
-            <div class="overview-title">
+            <div class="overview-title reveal">
+                <p class="section-eyebrow" data-i18n="overview-eyebrow">Business Areas</p>
                 <h2 data-i18n="overview-h2">사업분야</h2>
                 <p data-i18n="overview-p">다양한 산업 분야에 최적화된 Vision 검사 솔루션을 제공합니다.</p>
             </div>
             <div class="overview-grid">
-                <a href="business.html#battery" class="overview-card">
+                <a href="business.html#battery" class="overview-card reveal reveal-delay-1">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="1" y="7" width="17" height="11" rx="2"/><path d="M23 13v-2"/><path d="M8 12h3M11 9v6"/>
+                        </svg>
+                    </div>
                     <h3 data-i18n="sub-battery">Battery</h3>
                     <p data-i18n="card-battery">2차전지 전극공정·조립공정·모듈공정의 표면검사 및 치수측정 Vision 시스템</p>
                 </a>
-                <a href="business.html#pcb" class="overview-card">
+                <a href="business.html#pcb" class="overview-card reveal reveal-delay-2">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="4" y="4" width="16" height="16" rx="2"/><rect x="9" y="9" width="6" height="6"/>
+                            <line x1="9" y1="2" x2="9" y2="4"/><line x1="15" y1="2" x2="15" y2="4"/>
+                            <line x1="9" y1="20" x2="9" y2="22"/><line x1="15" y1="20" x2="15" y2="22"/>
+                            <line x1="20" y1="9" x2="22" y2="9"/><line x1="20" y1="14" x2="22" y2="14"/>
+                            <line x1="2" y1="9" x2="4" y2="9"/><line x1="2" y1="14" x2="4" y2="14"/>
+                        </svg>
+                    </div>
                     <h3 data-i18n="sub-pcb">PCB, FPCB</h3>
                     <p data-i18n="card-pcb">인쇄 회로 기판 패턴 검사기(AOI), 외관 검사기(AVI), Roll to Roll 검사 시스템</p>
                 </a>
-                <a href="business.html#camera" class="overview-card">
+                <a href="business.html#camera" class="overview-card reveal reveal-delay-3">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/>
+                            <circle cx="12" cy="13" r="4"/>
+                        </svg>
+                    </div>
                     <h3 data-i18n="sub-camera">Camera Module</h3>
                     <p data-i18n="card-camera">Camera Module 외관검사기, 6면 동시검사, Laser Module 및 Lens 검사기</p>
                 </a>
-                <a href="business.html#display" class="overview-card">
+                <a href="business.html#display" class="overview-card reveal reveal-delay-4">
+                    <div class="card-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round" stroke-linejoin="round">
+                            <rect x="2" y="3" width="20" height="14" rx="2"/>
+                            <line x1="8" y1="21" x2="16" y2="21"/>
+                            <line x1="12" y1="17" x2="12" y2="21"/>
+                        </svg>
+                    </div>
                     <h3 data-i18n="sub-display">Display</h3>
                     <p data-i18n="card-display">COF/S-IC Reel to Reel AFVI, TSP AOI, 투명 ITO 패턴 AOI, OLED FMM AOI/AVI</p>
                 </a>
@@ -116,26 +173,57 @@
 
     <!-- ══ FOOTER ══════════════════════════════════════════════ -->
     <footer class="site-footer">
-        <p data-i18n="footer-addr">㈜온스펙 &nbsp;|&nbsp; 경기도 화성시 봉담읍 동화길51, 6층 669호</p>
-        <p data-i18n="footer-tel">TEL : 000-0000-0000 &nbsp;|&nbsp; kslee@on-spec.co.kr</p>
-        <p class="footer-copy">© 2026 OnSpec Co., Ltd. All rights reserved.</p>
+        <div class="footer-inner">
+            <div class="footer-info">
+                <p data-i18n="footer-addr">㈜온스펙 &nbsp;|&nbsp; 경기도 화성시 봉담읍 동화길51, 6층 669호</p>
+                <p data-i18n="footer-tel">TEL : 000-0000-0000 &nbsp;|&nbsp; kslee@on-spec.co.kr</p>
+                <p class="footer-copy">© 2026 OnSpec Co., Ltd. All rights reserved.</p>
+            </div>
+            <div class="footer-logo">
+                <a href="index.html"><img src="res/logo.png" alt="㈜온스펙"></a>
+            </div>
+        </div>
     </footer>
 
     <script>
-        const menuToggle = document.getElementById('menuToggle');
-        const mobileNav = document.getElementById('mobileNav');
+        /* ── Scroll-based header ── */
+        (function () {
+            var header = document.querySelector('.site-header');
+            function onScroll() {
+                header.classList.toggle('scrolled', window.scrollY > 20);
+            }
+            window.addEventListener('scroll', onScroll, { passive: true });
+            onScroll();
+        })();
+
+        /* ── Mobile menu ── */
+        var menuToggle = document.getElementById('menuToggle');
+        var mobileNav  = document.getElementById('mobileNav');
         menuToggle.addEventListener('click', function () {
             mobileNav.classList.toggle('open');
             menuToggle.classList.toggle('open');
         });
-
-        /* Close mobile nav when any nav link is tapped (same-page anchors) */
         mobileNav.querySelectorAll('a').forEach(function (link) {
             link.addEventListener('click', function () {
                 mobileNav.classList.remove('open');
                 menuToggle.classList.remove('open');
             });
         });
+
+        /* ── Scroll reveal ── */
+        (function () {
+            var els = document.querySelectorAll('.reveal');
+            if (!els.length) return;
+            var io = new IntersectionObserver(function (entries) {
+                entries.forEach(function (e) {
+                    if (e.isIntersecting) {
+                        e.target.classList.add('visible');
+                        io.unobserve(e.target);
+                    }
+                });
+            }, { threshold: 0.12 });
+            els.forEach(function (el) { io.observe(el); });
+        })();
     </script>
     <script src="lang.js"></script>
 

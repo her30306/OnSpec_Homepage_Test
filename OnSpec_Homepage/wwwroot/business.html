@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <title>사업분야 - ㈜온스펙</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body data-page="business">
@@ -195,21 +198,36 @@
 
     <!-- ══ FOOTER ══════════════════════════════════════════════ -->
     <footer class="site-footer">
-        <p data-i18n="footer-addr">㈜온스펙 &nbsp;|&nbsp; 경기도 화성시 봉담읍 동화길51, 6층 669호</p>
-        <p data-i18n="footer-tel">TEL : 000-0000-0000 &nbsp;|&nbsp; kslee@on-spec.co.kr</p>
-        <p class="footer-copy">© 2026 OnSpec Co., Ltd. All rights reserved.</p>
+        <div class="footer-inner">
+            <div class="footer-info">
+                <p data-i18n="footer-addr">㈜온스펙 &nbsp;|&nbsp; 경기도 화성시 봉담읍 동화길51, 6층 669호</p>
+                <p data-i18n="footer-tel">TEL : 000-0000-0000 &nbsp;|&nbsp; kslee@on-spec.co.kr</p>
+                <p class="footer-copy">© 2026 OnSpec Co., Ltd. All rights reserved.</p>
+            </div>
+            <div class="footer-logo">
+                <a href="index.html"><img src="res/logo.png" alt="㈜온스펙"></a>
+            </div>
+        </div>
     </footer>
 
     <script>
+        /* ── Scroll-based header ── */
+        (function () {
+            var header = document.querySelector('.site-header');
+            function onScroll() {
+                header.classList.toggle('scrolled', window.scrollY > 20);
+            }
+            window.addEventListener('scroll', onScroll, { passive: true });
+            onScroll();
+        })();
+
         /* ── Mobile menu ── */
-        const menuToggle = document.getElementById('menuToggle');
-        const mobileNav = document.getElementById('mobileNav');
+        var menuToggle = document.getElementById('menuToggle');
+        var mobileNav  = document.getElementById('mobileNav');
         menuToggle.addEventListener('click', function () {
             mobileNav.classList.toggle('open');
             menuToggle.classList.toggle('open');
         });
-
-        /* Close mobile nav when any nav link is tapped (same-page anchors) */
         mobileNav.querySelectorAll('a').forEach(function (link) {
             link.addEventListener('click', function () {
                 mobileNav.classList.remove('open');
@@ -218,10 +236,9 @@
         });
 
         /* ── Sub-nav active state ── */
-        const subLinks = document.querySelectorAll('#subNav a');
-        const sections = document.querySelectorAll('.page-section');
-
-        const io = new IntersectionObserver(function (entries) {
+        var subLinks = document.querySelectorAll('#subNav a');
+        var sections = document.querySelectorAll('.page-section');
+        var io = new IntersectionObserver(function (entries) {
             entries.forEach(function (entry) {
                 if (entry.isIntersecting) {
                     var id = entry.target.getAttribute('id');
@@ -231,7 +248,6 @@
                 }
             });
         }, { rootMargin: '-130px 0px -55% 0px', threshold: 0 });
-
         sections.forEach(function (s) { io.observe(s); });
     </script>
     <script src="lang.js"></script>
