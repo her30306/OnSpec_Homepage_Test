@@ -931,12 +931,12 @@ img {
         width: 100%;
         height: 300px;
         object-fit: cover;
-        filter: brightness(0.9) saturate(1.1);
+        filter: saturate(1.1);
         transition: filter 0.3s;
     }
 
     .biz-image:hover img {
-        filter: brightness(1) saturate(1.15);
+        filter: saturate(1.2);
     }
 
 .biz-detail h3 {
