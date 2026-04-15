@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <title>OnSpec — Vision Inspection Solutions</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ========== HEADER ========== -->
+<header class="site-header">
+    <div class="header-inner">
+        <a href="index.html" class="site-logo">
+            <img src="res/logo.png" alt="OnSpec 로고">
+        </a>
+        <div class="nav-spacer"></div>
+        <nav class="main-nav" aria-label="주 메뉴">
+            <ul class="nav-list">
+                <li class="nav-item has-dropdown">
+                    <a href="company.html">회사소개</a>
+                    <ul class="dropdown">
+                        <li><a href="company.html#profile">Profile</a></li>
+                        <li><a href="company.html#org">조직도</a></li>
+                        <li><a href="company.html#location">Location</a></li>
+                        <li><a href="company.html#contact">Contact</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item has-dropdown">
+                    <a href="business.html">사업분야</a>
+                    <ul class="dropdown">
+                        <li><a href="business.html#battery">이차전지</a></li>
+                        <li><a href="business.html#pcb">PCB, FPCB</a></li>
+                        <li><a href="business.html#camera">카메라 모듈</a></li>
+                        <li><a href="business.html#display">Display</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <button class="nav-toggle" id="navToggle" aria-label="메뉴 열기" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</header>
+
+<!-- Mobile nav drawer -->
+<nav class="mobile-nav" id="mobileNav" aria-label="모바일 메뉴">
+    <ul>
+        <li>
+            <a class="mobile-parent" data-target="sub1">회사소개</a>
+            <ul class="mobile-sub" id="sub1">
+                <li><a href="company.html#profile">Profile</a></li>
+                <li><a href="company.html#org">조직도</a></li>
+                <li><a href="company.html#location">Location</a></li>
+                <li><a href="company.html#contact">Contact</a></li>
+            </ul>
+        </li>
+        <li>
+            <a class="mobile-parent" data-target="sub2">사업분야</a>
+            <ul class="mobile-sub" id="sub2">
+                <li><a href="business.html#battery">이차전지</a></li>
+                <li><a href="business.html#pcb">PCB, FPCB</a></li>
+                <li><a href="business.html#camera">카메라 모듈</a></li>
+                <li><a href="business.html#display">Display</a></li>
+            </ul>
+        </li>
+    </ul>
+</nav>
+
+<!-- ========== HERO ========== -->
+<section class="hero">
+    <h1>㈜온스펙<br><em>Vision Inspection Solutions</em></h1>
+    <p>광학설계 · S/W개발 · 딥러닝 기반<br>Total 검사 솔루션으로 고객의 가치에 기여합니다.</p>
+    <div class="hero-cta">
+        <a href="company.html" class="btn-primary">회사소개</a>
+        <a href="business.html" class="btn-outline">사업분야 보기</a>
+    </div>
+</section>
+
+<!-- ========== INTRO CARDS ========== -->
+<section class="home-section">
+    <h2 class="section-title">Why <span>OnSpec</span>?</h2>
+    <p class="section-subtitle">2006년 이래 20년간 Vision 검사 분야를 선도해 온 전문가 집단</p>
+    <div class="cards-grid">
+        <a href="company.html#profile" class="card card-accent clickable">
+            <h3>20년 경험</h3>
+            <p>2006년부터 축적된 Vision 검사 전문 노하우로 최고 품질의 솔루션을 제공합니다.</p>
+        </a>
+        <a href="business.html#battery" class="card card-accent clickable">
+            <h3>이차전지</h3>
+            <p>전극·조립·모듈 공정 전반의 비전 검사 시스템을 공급합니다.</p>
+        </a>
+        <a href="business.html#pcb" class="card card-accent clickable">
+            <h3>PCB / FPCB</h3>
+            <p>AOI·AVI 및 Roll to Roll 패턴 검사기로 정밀 회로 기판 검사를 지원합니다.</p>
+        </a>
+        <a href="business.html#camera" class="card card-accent clickable">
+            <h3>카메라 모듈</h3>
+            <p>Camera / Laser / Lens 모듈 외관 검사기를 통한 고정밀 품질 관리.</p>
+        </a>
+        <a href="business.html#display" class="card card-accent clickable">
+            <h3>Display</h3>
+            <p>COF·S-IC Reel to Reel, TSP AOI, OLED FMM AOI/AVI 솔루션 제공.</p>
+        </a>
+        <a href="company.html#contact" class="card card-accent clickable">
+            <h3>문의하기</h3>
+            <p>최적의 검사 솔루션 상담 및 기술 지원을 위해 언제든지 연락 주세요.</p>
+        </a>
+    </div>
+</section>
+
+<div class="banner-strip">
+    <h2>Total Vision Inspection Solution Provider</h2>
+    <p>광학설계부터 딥러닝 AI 검사까지 — 원스톱 솔루션으로 고객 경쟁력을 높입니다.</p>
+</div>
+
+<!-- ========== FOOTER ========== -->
+<footer class="site-footer">
+    <strong>㈜온스펙</strong> &nbsp;|&nbsp; 경기도 화성시 봉담읍 동화길51, 6층 669호<br>
+    © 2025 OnSpec Co., Ltd. All rights reserved.
+</footer>
+
+<script>
+(function () {
+    var toggle = document.getElementById('navToggle');
+    var drawer = document.getElementById('mobileNav');
+
+    toggle.addEventListener('click', function () {
+        var open = drawer.classList.toggle('open');
+        toggle.classList.toggle('active', open);
+        toggle.setAttribute('aria-expanded', String(open));
+    });
+
+    document.querySelectorAll('.mobile-parent').forEach(function (el) {
+        el.addEventListener('click', function () {
+            var targetId = el.getAttribute('data-target');
+            var sub = document.getElementById(targetId);
+            if (sub) sub.classList.toggle('open');
+        });
+    });
+
+    document.querySelectorAll('.mobile-nav a:not(.mobile-parent)').forEach(function (a) {
+        a.addEventListener('click', function () {
+            drawer.classList.remove('open');
+            toggle.classList.remove('active');
+            toggle.setAttribute('aria-expanded', 'false');
+        });
+    });
+})();
+</script>
+</body>
+</html>

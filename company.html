@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <title>회사소개 — OnSpec</title>
+    <link rel="stylesheet" href="style.css">
+    <script type="text/javascript" src="//dapi.kakao.com/v2/maps/sdk.js?appkey=194ebc2e518536d0afcc4bf7dd3fdeeb&libraries=services"></script>
+</head>
+<body>
+
+<!-- ========== HEADER ========== -->
+<header class="site-header">
+    <div class="header-inner">
+        <a href="index.html" class="site-logo">
+            <img src="res/logo.png" alt="OnSpec 로고">
+        </a>
+        <div class="nav-spacer"></div>
+        <nav class="main-nav" aria-label="주 메뉴">
+            <ul class="nav-list">
+                <li class="nav-item has-dropdown">
+                    <a href="company.html">회사소개</a>
+                    <ul class="dropdown">
+                        <li><a href="#profile">Profile</a></li>
+                        <li><a href="#org">조직도</a></li>
+                        <li><a href="#location">Location</a></li>
+                        <li><a href="#contact">Contact</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item has-dropdown">
+                    <a href="business.html">사업분야</a>
+                    <ul class="dropdown">
+                        <li><a href="business.html#battery">이차전지</a></li>
+                        <li><a href="business.html#pcb">PCB, FPCB</a></li>
+                        <li><a href="business.html#camera">카메라 모듈</a></li>
+                        <li><a href="business.html#display">Display</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <button class="nav-toggle" id="navToggle" aria-label="메뉴 열기" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</header>
+
+<!-- Mobile nav drawer -->
+<nav class="mobile-nav" id="mobileNav" aria-label="모바일 메뉴">
+    <ul>
+        <li>
+            <a class="mobile-parent" data-target="sub1">회사소개</a>
+            <ul class="mobile-sub" id="sub1">
+                <li><a href="#profile">Profile</a></li>
+                <li><a href="#org">조직도</a></li>
+                <li><a href="#location">Location</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </li>
+        <li>
+            <a class="mobile-parent" data-target="sub2">사업분야</a>
+            <ul class="mobile-sub" id="sub2">
+                <li><a href="business.html#battery">이차전지</a></li>
+                <li><a href="business.html#pcb">PCB, FPCB</a></li>
+                <li><a href="business.html#camera">카메라 모듈</a></li>
+                <li><a href="business.html#display">Display</a></li>
+            </ul>
+        </li>
+    </ul>
+</nav>
+
+<!-- ========== SUB-NAV ========== -->
+<nav class="sub-nav" aria-label="회사소개 하위 메뉴">
+    <div class="sub-nav-inner">
+        <a href="#profile" id="sn-profile">Profile</a>
+        <a href="#org" id="sn-org">조직도</a>
+        <a href="#location" id="sn-location">Location</a>
+        <a href="#contact" id="sn-contact">Contact</a>
+    </div>
+</nav>
+
+<!-- ========== CONTENT ========== -->
+<main class="page-content">
+
+    <!-- Profile -->
+    <section class="content-section" id="profile">
+        <div class="section-heading">
+            <h2>Profile</h2>
+            <div class="heading-line"></div>
+        </div>
+        <div class="profile-intro">
+            ㈜온스펙은 2006년부터 20년간 Vision 검사 분야에서 경험을 쌓아온 전문가들이 모여 설립한 기업으로
+            광학설계, S/W개발, 딥러닝을 이용한 Total 검사 솔루션 제공을 통해 고객의 가치에 기여하고자 합니다.
+        </div>
+        <div class="info-grid">
+            <div class="info-item">
+                <span class="label">업체명</span>
+                <span class="value">㈜온스펙</span>
+            </div>
+            <div class="info-item">
+                <span class="label">대표이사</span>
+                <span class="value">이관석</span>
+            </div>
+            <div class="info-item">
+                <span class="label">주소</span>
+                <span class="value">경기도 화성시 봉담읍 동화길51, 6층 669호</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- 조직도 -->
+    <section class="content-section" id="org">
+        <div class="section-heading">
+            <h2>조직도</h2>
+            <div class="heading-line"></div>
+        </div>
+        <div class="org-chart">
+            <div class="org-ceo">대표이사</div>
+            <div class="org-tree">
+                <div class="org-branch">
+                    <div class="org-node">S/W 개발팀</div>
+                </div>
+                <div class="org-branch">
+                    <div class="org-node">시스템 설계팀</div>
+                </div>
+                <div class="org-branch">
+                    <div class="org-node">기술지원팀</div>
+                </div>
+                <div class="org-branch">
+                    <div class="org-node">영업팀</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location -->
+    <section class="content-section" id="location">
+        <div class="section-heading">
+            <h2>Location</h2>
+            <div class="heading-line"></div>
+        </div>
+        <div id="map"></div>
+        <div class="map-address">
+            <strong>㈜온스펙</strong> &nbsp; 경기도 화성시 봉담읍 동화길51, 6층 669호
+        </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="content-section" id="contact">
+        <div class="section-heading">
+            <h2>Contact</h2>
+            <div class="heading-line"></div>
+        </div>
+        <table class="contact-table">
+            <tbody>
+                <tr>
+                    <th>TEL</th>
+                    <td>000-0000-0000</td>
+                </tr>
+                <tr>
+                    <th>FAX</th>
+                    <td>000-0000-0000</td>
+                </tr>
+                <tr>
+                    <th>Contact</th>
+                    <td><a href="mailto:kslee@on-spec.co.kr">kslee@on-spec.co.kr</a></td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+</main>
+
+<!-- ========== FOOTER ========== -->
+<footer class="site-footer">
+    <strong>㈜온스펙</strong> &nbsp;|&nbsp; 경기도 화성시 봉담읍 동화길51, 6층 669호<br>
+    © 2025 OnSpec Co., Ltd. All rights reserved.
+</footer>
+
+<script>
+/* ---------- Mobile nav ---------- */
+(function () {
+    var toggle = document.getElementById('navToggle');
+    var drawer = document.getElementById('mobileNav');
+
+    toggle.addEventListener('click', function () {
+        var open = drawer.classList.toggle('open');
+        toggle.classList.toggle('active', open);
+        toggle.setAttribute('aria-expanded', String(open));
+    });
+
+    document.querySelectorAll('.mobile-parent').forEach(function (el) {
+        el.addEventListener('click', function () {
+            var sub = document.getElementById(el.getAttribute('data-target'));
+            if (sub) sub.classList.toggle('open');
+        });
+    });
+
+    document.querySelectorAll('.mobile-nav a:not(.mobile-parent)').forEach(function (a) {
+        a.addEventListener('click', function () {
+            drawer.classList.remove('open');
+            toggle.classList.remove('active');
+            toggle.setAttribute('aria-expanded', 'false');
+        });
+    });
+})();
+
+/* ---------- Sub-nav active highlight ---------- */
+(function () {
+    var sections = ['profile', 'org', 'location', 'contact'];
+    var links    = {};
+    sections.forEach(function (id) {
+        links[id] = document.getElementById('sn-' + id);
+    });
+
+    function onScroll() {
+        var scrollY = window.scrollY + 130;
+        var active = sections[0];
+        sections.forEach(function (id) {
+            var el = document.getElementById(id);
+            if (el && el.offsetTop <= scrollY) { active = id; }
+        });
+        sections.forEach(function (id) {
+            if (links[id]) links[id].classList.toggle('active', id === active);
+        });
+    }
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+})();
+
+/* ---------- Kakao Map ---------- */
+window.addEventListener('load', function () {
+    if (typeof kakao === 'undefined' || !kakao.maps) return;
+
+    var container = document.getElementById('map');
+    var mapOption = {
+        center: new kakao.maps.LatLng(37.2124, 126.9888),
+        level: 4
+    };
+    var map = new kakao.maps.Map(container, mapOption);
+
+    var geocoder = new kakao.maps.services.Geocoder();
+    geocoder.addressSearch('경기도 화성시 봉담읍 동화길 51', function (result, status) {
+        if (status === kakao.maps.services.Status.OK) {
+            var coords = new kakao.maps.LatLng(result[0].y, result[0].x);
+            map.setCenter(coords);
+            var marker = new kakao.maps.Marker({ map: map, position: coords });
+            var infoContent = '<div style="padding:8px 12px;font-size:13px;font-family:sans-serif;">㈜온스펙</div>';
+            var infowindow = new kakao.maps.InfoWindow({ content: infoContent });
+            infowindow.open(map, marker);
+        }
+    });
+});
+</script>
+</body>
+</html>

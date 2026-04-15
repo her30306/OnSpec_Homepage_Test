@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" href="favicon.ico" type="image/x-icon">
+    <title>사업분야 — OnSpec</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<!-- ========== HEADER ========== -->
+<header class="site-header">
+    <div class="header-inner">
+        <a href="index.html" class="site-logo">
+            <img src="res/logo.png" alt="OnSpec 로고">
+        </a>
+        <div class="nav-spacer"></div>
+        <nav class="main-nav" aria-label="주 메뉴">
+            <ul class="nav-list">
+                <li class="nav-item has-dropdown">
+                    <a href="company.html">회사소개</a>
+                    <ul class="dropdown">
+                        <li><a href="company.html#profile">Profile</a></li>
+                        <li><a href="company.html#org">조직도</a></li>
+                        <li><a href="company.html#location">Location</a></li>
+                        <li><a href="company.html#contact">Contact</a></li>
+                    </ul>
+                </li>
+                <li class="nav-item has-dropdown">
+                    <a href="business.html">사업분야</a>
+                    <ul class="dropdown">
+                        <li><a href="#battery">이차전지</a></li>
+                        <li><a href="#pcb">PCB, FPCB</a></li>
+                        <li><a href="#camera">카메라 모듈</a></li>
+                        <li><a href="#display">Display</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </nav>
+        <button class="nav-toggle" id="navToggle" aria-label="메뉴 열기" aria-expanded="false">
+            <span></span><span></span><span></span>
+        </button>
+    </div>
+</header>
+
+<!-- Mobile nav drawer -->
+<nav class="mobile-nav" id="mobileNav" aria-label="모바일 메뉴">
+    <ul>
+        <li>
+            <a class="mobile-parent" data-target="sub1">회사소개</a>
+            <ul class="mobile-sub" id="sub1">
+                <li><a href="company.html#profile">Profile</a></li>
+                <li><a href="company.html#org">조직도</a></li>
+                <li><a href="company.html#location">Location</a></li>
+                <li><a href="company.html#contact">Contact</a></li>
+            </ul>
+        </li>
+        <li>
+            <a class="mobile-parent" data-target="sub2">사업분야</a>
+            <ul class="mobile-sub" id="sub2">
+                <li><a href="#battery">이차전지</a></li>
+                <li><a href="#pcb">PCB, FPCB</a></li>
+                <li><a href="#camera">카메라 모듈</a></li>
+                <li><a href="#display">Display</a></li>
+            </ul>
+        </li>
+    </ul>
+</nav>
+
+<!-- ========== SUB-NAV ========== -->
+<nav class="sub-nav" aria-label="사업분야 하위 메뉴">
+    <div class="sub-nav-inner">
+        <a href="#battery" id="sn-battery">이차전지</a>
+        <a href="#pcb" id="sn-pcb">PCB, FPCB</a>
+        <a href="#camera" id="sn-camera">카메라 모듈</a>
+        <a href="#display" id="sn-display">Display</a>
+    </div>
+</nav>
+
+<!-- ========== CONTENT ========== -->
+<main class="page-content">
+
+    <!-- 이차전지 -->
+    <section class="content-section" id="battery">
+        <div class="section-heading">
+            <h2>이차전지</h2>
+            <div class="heading-line"></div>
+        </div>
+        <div class="biz-block">
+            <div class="biz-img">
+                <img src="res/1_elec.png" alt="이차전지 비전 검사 시스템">
+            </div>
+            <div class="biz-content">
+                <ul>
+                    <li>전극공정 Coater, Roll-Press, Slitter 표면 검사 Vision, 치수 측정 Vision</li>
+                    <li>조립 공정 L&amp;S 라인 비전 시스템</li>
+                    <li>조립 공정 PKG 라인 비전 시스템</li>
+                    <li>모듈 공정 Bur-bar 외 비전 시스템</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- PCB, FPCB -->
+    <section class="content-section" id="pcb">
+        <div class="section-heading">
+            <h2>PCB, FPCB</h2>
+            <div class="heading-line"></div>
+        </div>
+        <div class="biz-block reverse">
+            <div class="biz-img">
+                <img src="res/2_pcb.png" alt="PCB FPCB 검사 시스템">
+            </div>
+            <div class="biz-content">
+                <ul>
+                    <li>PCB, FPCB 인쇄 회로 기판 패턴 검사기(AOI)</li>
+                    <li>PCB, FPCB 인쇄 회로 기판 외관 검사기(AVI)</li>
+                    <li>FPCB Roll to Roll 패턴 검사기 (RTR AOI &amp; VRS)</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- 카메라 모듈 -->
+    <section class="content-section" id="camera">
+        <div class="section-heading">
+            <h2>카메라 모듈</h2>
+            <div class="heading-line"></div>
+        </div>
+        <div class="biz-block">
+            <div class="biz-img">
+                <img src="res/3_camera.png" alt="카메라 모듈 검사 시스템">
+            </div>
+            <div class="biz-content">
+                <ul>
+                    <li>Camera Module 외관검사기</li>
+                    <li>Camera Module 6면 외관검사기</li>
+                    <li>Laser Module 외관검사기</li>
+                    <li>Lens 외관 검사기</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <!-- Display -->
+    <section class="content-section" id="display">
+        <div class="section-heading">
+            <h2>Display</h2>
+            <div class="heading-line"></div>
+        </div>
+        <div class="biz-block reverse">
+            <div class="biz-img">
+                <img src="res/4_display.png" alt="Display 검사 시스템">
+            </div>
+            <div class="biz-content">
+                <ul>
+                    <li>COF Reel to Reel AFVI (최종 외관 검사기)</li>
+                    <li>S-IC Reel to Reel AFVI (최종 외관 검사기)</li>
+                    <li>Touch Screen Panel AOI</li>
+                    <li>투명 ITO Pattern AOI</li>
+                    <li>OLED FMM AOI/AVI</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+</main>
+
+<!-- ========== FOOTER ========== -->
+<footer class="site-footer">
+    <strong>㈜온스펙</strong> &nbsp;|&nbsp; 경기도 화성시 봉담읍 동화길51, 6층 669호<br>
+    © 2025 OnSpec Co., Ltd. All rights reserved.
+</footer>
+
+<script>
+/* ---------- Mobile nav ---------- */
+(function () {
+    var toggle = document.getElementById('navToggle');
+    var drawer = document.getElementById('mobileNav');
+
+    toggle.addEventListener('click', function () {
+        var open = drawer.classList.toggle('open');
+        toggle.classList.toggle('active', open);
+        toggle.setAttribute('aria-expanded', String(open));
+    });
+
+    document.querySelectorAll('.mobile-parent').forEach(function (el) {
+        el.addEventListener('click', function () {
+            var sub = document.getElementById(el.getAttribute('data-target'));
+            if (sub) sub.classList.toggle('open');
+        });
+    });
+
+    document.querySelectorAll('.mobile-nav a:not(.mobile-parent)').forEach(function (a) {
+        a.addEventListener('click', function () {
+            drawer.classList.remove('open');
+            toggle.classList.remove('active');
+            toggle.setAttribute('aria-expanded', 'false');
+        });
+    });
+})();
+
+/* ---------- Sub-nav active highlight ---------- */
+(function () {
+    var sections = ['battery', 'pcb', 'camera', 'display'];
+    var links    = {};
+    sections.forEach(function (id) {
+        links[id] = document.getElementById('sn-' + id);
+    });
+
+    function onScroll() {
+        var scrollY = window.scrollY + 130;
+        var active = sections[0];
+        sections.forEach(function (id) {
+            var el = document.getElementById(id);
+            if (el && el.offsetTop <= scrollY) { active = id; }
+        });
+        sections.forEach(function (id) {
+            if (links[id]) links[id].classList.toggle('active', id === active);
+        });
+    }
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    onScroll();
+})();
+</script>
+</body>
+</html>
