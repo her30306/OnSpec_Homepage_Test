@@ -197,6 +197,30 @@ img {
         transform: translateY(-7px) rotate(-45deg);
     }
 
+/* Language toggle */
+.lang-toggle {
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--primary);
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    padding: 5px 11px;
+    border-radius: 4px;
+    margin-left: 12px;
+    flex-shrink: 0;
+    transition: background 0.18s, color 0.18s, border-color 0.18s;
+    white-space: nowrap;
+}
+
+    .lang-toggle:hover {
+        background: var(--bg-alt);
+        border-color: var(--accent);
+        color: var(--accent);
+    }
+
 /* Mobile nav overlay */
 .mobile-nav {
     display: none;

@@ -7,7 +7,7 @@
     <title>회사소개 - ㈜온스펙</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body data-page="about">
 
     <!-- ══ HEADER ══════════════════════════════════════════════ -->
     <header class="site-header">
@@ -18,7 +18,7 @@
             <nav class="main-nav">
                 <ul>
                     <li class="has-dropdown">
-                        <a href="about.html">회사소개</a>
+                        <a href="about.html" data-i18n="nav-about">회사소개</a>
                         <ul class="dropdown">
                             <li><a href="about.html#profile">Profile</a></li>
                             <li><a href="about.html#orgchart">Org Chart</a></li>
@@ -27,7 +27,7 @@
                         </ul>
                     </li>
                     <li class="has-dropdown">
-                        <a href="business.html">사업분야</a>
+                        <a href="business.html" data-i18n="nav-business">사업분야</a>
                         <ul class="dropdown">
                             <li><a href="business.html#battery">Battery</a></li>
                             <li><a href="business.html#pcb">PCB, FPCB</a></li>
@@ -37,7 +37,8 @@
                     </li>
                 </ul>
             </nav>
-            <button class="menu-toggle" id="menuToggle" aria-label="메뉴 열기">
+            <button class="lang-toggle" id="langToggle">EN</button>
+            <button class="menu-toggle" id="menuToggle" data-i18n-aria="menu-aria" aria-label="메뉴 열기">
                 <span></span><span></span><span></span>
             </button>
         </div>
@@ -47,7 +48,7 @@
     <nav class="mobile-nav" id="mobileNav">
         <ul>
             <li>
-                <a href="about.html">회사소개</a>
+                <a href="about.html" data-i18n="nav-about">회사소개</a>
                 <ul class="mobile-sub">
                     <li><a href="about.html#profile">Profile</a></li>
                     <li><a href="about.html#orgchart">Org Chart</a></li>
@@ -56,7 +57,7 @@
                 </ul>
             </li>
             <li>
-                <a href="business.html">사업분야</a>
+                <a href="business.html" data-i18n="nav-business">사업분야</a>
                 <ul class="mobile-sub">
                     <li><a href="business.html#battery">Battery</a></li>
                     <li><a href="business.html#pcb">PCB, FPCB</a></li>
@@ -84,22 +85,22 @@
         <section id="profile" class="page-section">
             <div class="section-inner">
                 <div class="section-title"><h2>Profile</h2></div>
-                <p class="profile-intro">
+                <p class="profile-intro" data-i18n="profile-intro">
                     ㈜온스펙은 2006년부터 20년간 Vision 검사 분야에서 경험을 쌓아온 전문가들이 모여 설립한 기업으로
                     광학설계, S/W개발, 딥러닝을 이용한 Total 검사 솔루션 제공을 통해 고객의 가치에 기여하고자 합니다.
                 </p>
                 <div class="profile-info">
                     <div class="profile-info-row">
-                        <span class="label">업체명</span>
+                        <span class="label" data-i18n="label-company">업체명</span>
                         <span class="value">㈜온스펙</span>
                     </div>
                     <div class="profile-info-row">
-                        <span class="label">대표이사</span>
+                        <span class="label" data-i18n="label-ceo">대표이사</span>
                         <span class="value">이관석</span>
                     </div>
                     <div class="profile-info-row">
-                        <span class="label">주소</span>
-                        <span class="value">경기도 화성시 봉담읍 동화길51, 6층 669호</span>
+                        <span class="label" data-i18n="label-address">주소</span>
+                        <span class="value" data-i18n="value-address">경기도 화성시 봉담읍 동화길51, 6층 669호</span>
                     </div>
                 </div>
             </div>
@@ -111,13 +112,13 @@
                 <div class="section-title"><h2>Org Chart</h2></div>
                 <div class="org-chart">
                     <div class="org-root">
-                        <div class="org-root-box">대표이사</div>
+                        <div class="org-root-box" data-i18n="org-ceo">대표이사</div>
                     </div>
                     <div class="org-branches">
-                        <div class="org-branch"><div class="org-box">S/W 개발팀</div></div>
-                        <div class="org-branch"><div class="org-box">시스템 설계팀</div></div>
-                        <div class="org-branch"><div class="org-box">기술지원팀</div></div>
-                        <div class="org-branch"><div class="org-box">영업팀</div></div>
+                        <div class="org-branch"><div class="org-box" data-i18n="org-sw">S/W 개발팀</div></div>
+                        <div class="org-branch"><div class="org-box" data-i18n="org-system">시스템 설계팀</div></div>
+                        <div class="org-branch"><div class="org-box" data-i18n="org-support">기술지원팀</div></div>
+                        <div class="org-branch"><div class="org-box" data-i18n="org-sales">영업팀</div></div>
                     </div>
                 </div>
             </div>
@@ -128,7 +129,7 @@
             <div class="section-inner">
                 <div class="section-title"><h2>Location</h2></div>
                 <div id="map-container"></div>
-                <p class="map-address">경기도 화성시 봉담읍 동화길51, 6층 669호</p>
+                <p class="map-address" data-i18n="map-address">경기도 화성시 봉담읍 동화길51, 6층 669호</p>
             </div>
         </section>
 
@@ -159,8 +160,8 @@
 
     <!-- ══ FOOTER ══════════════════════════════════════════════ -->
     <footer class="site-footer">
-        <p>㈜온스펙 &nbsp;|&nbsp; 경기도 화성시 봉담읍 동화길51, 6층 669호</p>
-        <p>TEL : 000-0000-0000 &nbsp;|&nbsp; kslee@on-spec.co.kr</p>
+        <p data-i18n="footer-addr">㈜온스펙 &nbsp;|&nbsp; 경기도 화성시 봉담읍 동화길51, 6층 669호</p>
+        <p data-i18n="footer-tel">TEL : 000-0000-0000 &nbsp;|&nbsp; kslee@on-spec.co.kr</p>
         <p class="footer-copy">© 2026 OnSpec Co., Ltd. All rights reserved.</p>
     </footer>
 
@@ -218,7 +219,7 @@
                 var marker = new kakao.maps.Marker({ map: map, position: coords });
 
                 kakao.maps.event.addListener(marker, 'click', function () {
-                    if (window.confirm('카카오 맵으로 이동할까요?')) {
+                    if (window.confirm(window.t('kakao-confirm'))) {
                         window.open(
                             'https://map.kakao.com/link/map/㈜온스펙,' +
                             coords.getLat() + ',' + coords.getLng(),
@@ -229,6 +230,7 @@
             });
         });
     </script>
+    <script src="lang.js"></script>
 
 </body>
 </html>
