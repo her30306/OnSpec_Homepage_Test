@@ -7,7 +7,7 @@
     <title>㈜온스펙 - Vision 검사 Total Solution</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
+<body data-page="index">
 
     <!-- ══ HEADER ══════════════════════════════════════════════ -->
     <header class="site-header">
@@ -18,26 +18,27 @@
             <nav class="main-nav">
                 <ul>
                     <li class="has-dropdown">
-                        <a href="about.html">회사소개</a>
+                        <a href="about.html" data-i18n="nav-about">회사소개</a>
                         <ul class="dropdown">
-                            <li><a href="about.html#profile">Profile</a></li>
-                            <li><a href="about.html#orgchart">Org Chart</a></li>
-                            <li><a href="about.html#location">Location</a></li>
-                            <li><a href="about.html#contact">Contact</a></li>
+                            <li><a href="about.html#profile" data-i18n="sub-profile">Profile</a></li>
+                            <li><a href="about.html#orgchart" data-i18n="sub-orgchart">Org Chart</a></li>
+                            <li><a href="about.html#location" data-i18n="sub-location">Location</a></li>
+                            <li><a href="about.html#contact" data-i18n="sub-contact">Contact</a></li>
                         </ul>
                     </li>
                     <li class="has-dropdown">
-                        <a href="business.html">사업분야</a>
+                        <a href="business.html" data-i18n="nav-business">사업분야</a>
                         <ul class="dropdown">
-                            <li><a href="business.html#battery">Battery</a></li>
-                            <li><a href="business.html#pcb">PCB, FPCB</a></li>
-                            <li><a href="business.html#camera">Camera Module</a></li>
-                            <li><a href="business.html#display">Display</a></li>
+                            <li><a href="business.html#battery" data-i18n="sub-battery">Battery</a></li>
+                            <li><a href="business.html#pcb" data-i18n="sub-pcb">PCB, FPCB</a></li>
+                            <li><a href="business.html#camera" data-i18n="sub-camera">Camera Module</a></li>
+                            <li><a href="business.html#display" data-i18n="sub-display">Display</a></li>
                         </ul>
                     </li>
                 </ul>
             </nav>
-            <button class="menu-toggle" id="menuToggle" aria-label="메뉴 열기">
+            <div class="lang-select" id="langSelect"></div>
+            <button class="menu-toggle" id="menuToggle" data-i18n-aria="menu-aria" aria-label="메뉴 열기">
                 <span></span><span></span><span></span>
             </button>
         </div>
@@ -47,21 +48,21 @@
     <nav class="mobile-nav" id="mobileNav">
         <ul>
             <li>
-                <a href="about.html">회사소개</a>
+                <a href="about.html" data-i18n="nav-about">회사소개</a>
                 <ul class="mobile-sub">
-                    <li><a href="about.html#profile">Profile</a></li>
-                    <li><a href="about.html#orgchart">Org Chart</a></li>
-                    <li><a href="about.html#location">Location</a></li>
-                    <li><a href="about.html#contact">Contact</a></li>
+                    <li><a href="about.html#profile" data-i18n="sub-profile">Profile</a></li>
+                    <li><a href="about.html#orgchart" data-i18n="sub-orgchart">Org Chart</a></li>
+                    <li><a href="about.html#location" data-i18n="sub-location">Location</a></li>
+                    <li><a href="about.html#contact" data-i18n="sub-contact">Contact</a></li>
                 </ul>
             </li>
             <li>
-                <a href="business.html">사업분야</a>
+                <a href="business.html" data-i18n="nav-business">사업분야</a>
                 <ul class="mobile-sub">
-                    <li><a href="business.html#battery">Battery</a></li>
-                    <li><a href="business.html#pcb">PCB, FPCB</a></li>
-                    <li><a href="business.html#camera">Camera Module</a></li>
-                    <li><a href="business.html#display">Display</a></li>
+                    <li><a href="business.html#battery" data-i18n="sub-battery">Battery</a></li>
+                    <li><a href="business.html#pcb" data-i18n="sub-pcb">PCB, FPCB</a></li>
+                    <li><a href="business.html#camera" data-i18n="sub-camera">Camera Module</a></li>
+                    <li><a href="business.html#display" data-i18n="sub-display">Display</a></li>
                 </ul>
             </li>
         </ul>
@@ -73,14 +74,14 @@
         <!-- HERO -->
         <section class="hero">
             <div class="hero-inner">
-                <h1>Vision 검사 <em>Total Solution</em><br>전문기업</h1>
-                <p>
+                <h1 data-i18n="hero-title">Vision 검사 <em>Total Solution</em><br>전문기업</h1>
+                <p data-i18n="hero-desc">
                     ㈜온스펙은 2006년부터 20년간 Vision 검사 분야에서 축적된 전문 기술력을 바탕으로<br>
                     광학설계, S/W개발, 딥러닝을 아우르는 Total 검사 솔루션을 제공합니다.
                 </p>
                 <div class="hero-cta">
-                    <a href="about.html" class="btn-primary">회사소개</a>
-                    <a href="business.html" class="btn-outline">사업분야 보기</a>
+                    <a href="about.html" class="btn-primary" data-i18n="hero-btn-about">회사소개</a>
+                    <a href="business.html" class="btn-outline" data-i18n="hero-btn-business">사업분야 보기</a>
                 </div>
             </div>
         </section>
@@ -88,25 +89,25 @@
         <!-- OVERVIEW -->
         <section class="overview">
             <div class="overview-title">
-                <h2>사업분야</h2>
-                <p>다양한 산업 분야에 최적화된 Vision 검사 솔루션을 제공합니다.</p>
+                <h2 data-i18n="overview-h2">사업분야</h2>
+                <p data-i18n="overview-p">다양한 산업 분야에 최적화된 Vision 검사 솔루션을 제공합니다.</p>
             </div>
             <div class="overview-grid">
                 <a href="business.html#battery" class="overview-card">
-                    <h3>Battery</h3>
-                    <p>2차전지 전극공정·조립공정·모듈공정의 표면검사 및 치수측정 Vision 시스템</p>
+                    <h3 data-i18n="sub-battery">Battery</h3>
+                    <p data-i18n="card-battery">2차전지 전극공정·조립공정·모듈공정의 표면검사 및 치수측정 Vision 시스템</p>
                 </a>
                 <a href="business.html#pcb" class="overview-card">
-                    <h3>PCB, FPCB</h3>
-                    <p>인쇄 회로 기판 패턴 검사기(AOI), 외관 검사기(AVI), Roll to Roll 검사 시스템</p>
+                    <h3 data-i18n="sub-pcb">PCB, FPCB</h3>
+                    <p data-i18n="card-pcb">인쇄 회로 기판 패턴 검사기(AOI), 외관 검사기(AVI), Roll to Roll 검사 시스템</p>
                 </a>
                 <a href="business.html#camera" class="overview-card">
-                    <h3>Camera Module</h3>
-                    <p>Camera Module 외관검사기, 6면 동시검사, Laser Module 및 Lens 검사기</p>
+                    <h3 data-i18n="sub-camera">Camera Module</h3>
+                    <p data-i18n="card-camera">Camera Module 외관검사기, 6면 동시검사, Laser Module 및 Lens 검사기</p>
                 </a>
                 <a href="business.html#display" class="overview-card">
-                    <h3>Display</h3>
-                    <p>COF/S-IC Reel to Reel AFVI, TSP AOI, 투명 ITO 패턴 AOI, OLED FMM AOI/AVI</p>
+                    <h3 data-i18n="sub-display">Display</h3>
+                    <p data-i18n="card-display">COF/S-IC Reel to Reel AFVI, TSP AOI, 투명 ITO 패턴 AOI, OLED FMM AOI/AVI</p>
                 </a>
             </div>
         </section>
@@ -115,8 +116,8 @@
 
     <!-- ══ FOOTER ══════════════════════════════════════════════ -->
     <footer class="site-footer">
-        <p>㈜온스펙 &nbsp;|&nbsp; 경기도 화성시 봉담읍 동화길51, 6층 669호</p>
-        <p>TEL : 000-0000-0000 &nbsp;|&nbsp; kslee@on-spec.co.kr</p>
+        <p data-i18n="footer-addr">㈜온스펙 &nbsp;|&nbsp; 경기도 화성시 봉담읍 동화길51, 6층 669호</p>
+        <p data-i18n="footer-tel">TEL : 000-0000-0000 &nbsp;|&nbsp; kslee@on-spec.co.kr</p>
         <p class="footer-copy">© 2026 OnSpec Co., Ltd. All rights reserved.</p>
     </footer>
 
@@ -136,6 +137,7 @@
             });
         });
     </script>
+    <script src="lang.js"></script>
 
 </body>
 </html>

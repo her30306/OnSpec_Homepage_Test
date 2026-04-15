@@ -197,6 +197,93 @@ img {
         transform: translateY(-7px) rotate(-45deg);
     }
 
+/* Language select dropdown */
+.lang-select {
+    position: relative;
+    margin-left: 12px;
+    flex-shrink: 0;
+}
+
+.lang-select__btn {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    background: transparent;
+    border: 1px solid var(--border);
+    color: var(--primary);
+    cursor: pointer;
+    font-family: inherit;
+    font-size: 12px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    padding: 5px 10px;
+    border-radius: 4px;
+    white-space: nowrap;
+    transition: background 0.18s, color 0.18s, border-color 0.18s;
+}
+
+    .lang-select__btn:hover,
+    .lang-select.open .lang-select__btn {
+        background: var(--bg-alt);
+        border-color: var(--accent);
+        color: var(--accent);
+    }
+
+.lang-select__arrow {
+    display: inline-block;
+    width: 0;
+    height: 0;
+    border-left: 4px solid transparent;
+    border-right: 4px solid transparent;
+    border-top: 5px solid currentColor;
+    transition: transform 0.2s;
+}
+
+    .lang-select.open .lang-select__arrow {
+        transform: rotate(180deg);
+    }
+
+.lang-select__menu {
+    display: none;
+    position: absolute;
+    top: calc(100% + 6px);
+    right: 0;
+    background: var(--bg-white);
+    border: 1px solid var(--border);
+    border-radius: 6px;
+    box-shadow: 0 8px 28px rgba(0,0,0,0.14);
+    list-style: none;
+    min-width: 110px;
+    overflow: hidden;
+    z-index: 1200;
+    padding: 4px 0;
+}
+
+    .lang-select.open .lang-select__menu {
+        display: block;
+    }
+
+.lang-select__item {
+    padding: 10px 16px;
+    font-size: 13px;
+    font-weight: 500;
+    color: var(--text);
+    cursor: pointer;
+    white-space: nowrap;
+    transition: background 0.15s, color 0.15s;
+}
+
+    .lang-select__item:hover {
+        background: var(--bg-alt);
+        color: var(--accent);
+    }
+
+    .lang-select__item.active {
+        color: var(--accent);
+        font-weight: 700;
+        background: var(--bg-alt);
+    }
+
 /* Mobile nav overlay */
 .mobile-nav {
     display: none;
