@@ -1,5 +1,11 @@
 /* lang.js – KO / EN i18n for OnSpec homepage */
 
+/* ── Available languages (add new entries here to extend) ── */
+var LANGUAGES = [
+    { code: 'ko', label: '한국어' },
+    { code: 'en', label: 'English' }
+];
+
 var TRANSLATIONS = {
     ko: {
         /* ── Page titles ── */
@@ -11,7 +17,6 @@ var TRANSLATIONS = {
         'nav-about':      '회사소개',
         'nav-business':   '사업분야',
         'menu-aria':      '메뉴 열기',
-        'lang-toggle':    'EN',
 
         /* ── Footer ── */
         'footer-addr': '㈜온스펙 &nbsp;|&nbsp; 경기도 화성시 봉담읍 동화길51, 6층 669호',
@@ -92,7 +97,6 @@ var TRANSLATIONS = {
         'nav-about':      'About Us',
         'nav-business':   'Business',
         'menu-aria':      'Open menu',
-        'lang-toggle':    '한국어',
 
         /* ── Footer ── */
         'footer-addr': 'OnSpec Co., Ltd. &nbsp;|&nbsp; 669, 6F, 51 Donghwa-gil, Bongdam-eup, Hwaseong-si, Gyeonggi-do',
@@ -201,25 +205,90 @@ function applyLang(lang) {
     /* <html lang="..."> */
     document.documentElement.lang = lang;
 
-    /* Lang toggle button label */
-    var btn = document.getElementById('langToggle');
-    if (btn && dict['lang-toggle']) {
-        btn.innerHTML = dict['lang-toggle'];
+    /* Sync active state in dropdown */
+    document.querySelectorAll('.lang-select__item').forEach(function (item) {
+        item.classList.toggle('active', item.getAttribute('data-lang') === lang);
+    });
+
+    /* Update dropdown button label */
+    var btnLabel = document.querySelector('.lang-select__label');
+    if (btnLabel) {
+        var langObj = LANGUAGES.find(function (l) { return l.code === lang; });
+        if (langObj) { btnLabel.textContent = langObj.label; }
     }
+}
+
+/* ── Build language dropdown inside #langSelect ── */
+function buildLangSelect() {
+    var container = document.getElementById('langSelect');
+    if (!container) return;
+
+    var current = localStorage.getItem('lang') || 'ko';
+    var currentObj = LANGUAGES.find(function (l) { return l.code === current; }) || LANGUAGES[0];
+
+    /* Button */
+    var btn = document.createElement('button');
+    btn.className = 'lang-select__btn';
+    btn.setAttribute('aria-haspopup', 'listbox');
+    btn.setAttribute('aria-expanded', 'false');
+
+    var labelSpan = document.createElement('span');
+    labelSpan.className = 'lang-select__label';
+    labelSpan.textContent = currentObj.label;
+
+    var arrowSpan = document.createElement('span');
+    arrowSpan.className = 'lang-select__arrow';
+    arrowSpan.setAttribute('aria-hidden', 'true');
+
+    btn.appendChild(labelSpan);
+    btn.appendChild(arrowSpan);
+
+    /* Dropdown list */
+    var menu = document.createElement('ul');
+    menu.className = 'lang-select__menu';
+    menu.setAttribute('role', 'listbox');
+
+    LANGUAGES.forEach(function (lang) {
+        var item = document.createElement('li');
+        item.className = 'lang-select__item' + (lang.code === current ? ' active' : '');
+        item.setAttribute('role', 'option');
+        item.setAttribute('data-lang', lang.code);
+        item.setAttribute('aria-selected', lang.code === current ? 'true' : 'false');
+        item.textContent = lang.label;
+
+        item.addEventListener('click', function () {
+            localStorage.setItem('lang', lang.code);
+            applyLang(lang.code);
+            closeDropdown(container, btn);
+        });
+
+        menu.appendChild(item);
+    });
+
+    container.appendChild(btn);
+    container.appendChild(menu);
+
+    /* Toggle open/close on button click */
+    btn.addEventListener('click', function (e) {
+        e.stopPropagation();
+        var isOpen = container.classList.toggle('open');
+        btn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+
+    /* Close when clicking outside */
+    document.addEventListener('click', function () {
+        closeDropdown(container, btn);
+    });
+}
+
+function closeDropdown(container, btn) {
+    container.classList.remove('open');
+    if (btn) { btn.setAttribute('aria-expanded', 'false'); }
 }
 
 /* ── Initialise ── */
 function initLang() {
-    /* Wire up toggle button */
-    var btn = document.getElementById('langToggle');
-    if (btn) {
-        btn.addEventListener('click', function () {
-            var current = localStorage.getItem('lang') || 'ko';
-            var next = (current === 'ko') ? 'en' : 'ko';
-            localStorage.setItem('lang', next);
-            applyLang(next);
-        });
-    }
+    buildLangSelect();
 
     var saved = localStorage.getItem('lang');
     if (saved) {
