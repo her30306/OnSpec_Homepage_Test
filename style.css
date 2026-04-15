@@ -233,15 +233,13 @@ img {
     font-size: 14px;
     font-weight: 500;
     border-bottom: 1px solid var(--border);
-    border-left: 3px solid transparent;
-    transition: color 0.18s, border-color 0.18s, background 0.18s;
+    transition: color 0.18s, background 0.18s;
 }
 
     .mobile-sub li a:hover,
     .mobile-sub li a.active {
         color: var(--accent);
         background: var(--bg-alt);
-        border-left-color: var(--accent);
     }
 
 /* ── Page body offset ───────────────────────────────────── */
