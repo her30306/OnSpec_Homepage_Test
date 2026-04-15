@@ -1,1 +1,4 @@
 ﻿/.vs
+/OnSpec_Homepage/bin
+/OnSpec_Homepage/obj
+/OnSpec_Homepage/OnSpec_Homepage.csproj.user
