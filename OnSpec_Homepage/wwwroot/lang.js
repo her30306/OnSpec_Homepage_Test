@@ -23,6 +23,7 @@ var TRANSLATIONS = {
         'footer-tel':  'TEL : 000-0000-0000 &nbsp;|&nbsp; kslee@on-spec.co.kr',
 
         /* ── index.html ── */
+        'hero-badge':         'Vision 검사 전문기업',
         'hero-title':         'Vision 검사 <em>Total Solution</em><br>전문기업',
         'hero-desc':          '㈜온스펙은 2006년부터 20년간 Vision 검사 분야에서 축적된 전문 기술력을 바탕으로<br>광학설계, S/W개발, 딥러닝을 아우르는 Total 검사 솔루션을 제공합니다.',
         'hero-btn-about':     '회사소개',
@@ -33,6 +34,12 @@ var TRANSLATIONS = {
         'card-pcb':           '인쇄 회로 기판 패턴 검사기(AOI), 외관 검사기(AVI), Roll to Roll 검사 시스템',
         'card-camera':        'Camera Module 외관검사기, 6면 동시검사, Laser Module 및 Lens 검사기',
         'card-display':       'COF/S-IC Reel to Reel AFVI, TSP AOI, 투명 ITO 패턴 AOI, OLED FMM AOI/AVI',
+
+        /* ── Stats bar (index.html) ── */
+        'stat-years':    '년 기술력',
+        'stat-sectors':  '개 사업분야',
+        'stat-ai':       '딥러닝 검사',
+        'stat-solution': '검사 솔루션',
 
         /* ── Sub-nav / section headings (about) ── */
         'sub-profile':    '프로필',
@@ -122,6 +129,7 @@ var TRANSLATIONS = {
         'footer-tel':  'TEL : 000-0000-0000 &nbsp;|&nbsp; kslee@on-spec.co.kr',
 
         /* ── index.html ── */
+        'hero-badge':         'Vision Inspection Specialist',
         'hero-title':         'Vision Inspection <em>Total Solution</em><br>Specialist',
         'hero-desc':          'OnSpec Co., Ltd., built on 20 years of expertise in Vision inspection since 2006,<br>provides Total inspection solutions spanning optical design, S/W development, and deep learning.',
         'hero-btn-about':     'About Us',
@@ -132,6 +140,12 @@ var TRANSLATIONS = {
         'card-pcb':           'PCB pattern inspection (AOI), appearance inspection (AVI), and Roll to Roll inspection systems.',
         'card-camera':        'Camera Module appearance inspection, 6-sided simultaneous inspection, Laser Module and Lens inspection.',
         'card-display':       'COF/S-IC Reel to Reel AFVI, TSP AOI, Transparent ITO Pattern AOI, OLED FMM AOI/AVI.',
+
+        /* ── Stats bar (index.html) ── */
+        'stat-years':    'Years of Expertise',
+        'stat-sectors':  'Business Sectors',
+        'stat-ai':       'AI Deep Learning',
+        'stat-solution': 'Total Solution',
 
         /* ── Sub-nav / section headings (about) ── */
         'sub-profile':    'Profile',
