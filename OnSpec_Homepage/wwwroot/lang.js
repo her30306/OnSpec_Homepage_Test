@@ -236,8 +236,9 @@ function initLang() {
             applyLang(lang);
         })
         .catch(function () {
-            /* Fallback: keep default Korean */
+            /* Fallback: keep default Korean and apply translations */
             localStorage.setItem('lang', 'ko');
+            applyLang('ko');
         });
 }
 
