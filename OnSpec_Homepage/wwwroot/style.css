@@ -3,25 +3,25 @@
    Color theme derived from res/logo.png:
      Charcoal  #3C3C3C  (logo text)
      Sage-green #A5C378  (logo accent)
-   Dark theme: deep dark green-tinted backgrounds, green accents preserved
+   Dark theme: navy backgrounds, green text & lines
    ============================================================ */
 
 /* ── Variables ──────────────────────────────────────────── */
 :root {
-    --primary: #C0DEAA; /* light sage-green — headings and labels on dark bg */
+    --primary: #C0DEAA; /* light sage-green — headings and labels */
     --primary-light: #D8EEC8; /* lighter tint of primary for subtle highlights */
-    --accent: #6BA832; /* vivid green from logo — preserved */
-    --accent-dark: #7DC23A; /* lighter green variant for dark-bg contrast (was darker in light theme) */
-    --accent-light: #A5C378; /* logo sage-green, tints — preserved */
-    --text: #D6EAC8; /* light greenish-white text */
-    --text-mid: #8AAF78; /* muted green-gray */
-    --text-light: #5C7A50; /* dim green-gray */
-    --bg: #0D1410; /* very dark green-tinted background */
-    --bg-surface: #131A11; /* card / raised surface in dark theme (replaces bg-white) */
-    --bg-white: #131A11; /* alias kept for selector compatibility */
-    --bg-alt: #182016; /* alternate section dark background */
-    --border: #253520; /* dark green border */
-    --border-strong: #2E4428; /* slightly lighter dark border */
+    --accent: #6BA832; /* vivid green from logo */
+    --accent-dark: #7DC23A; /* lighter green variant for navy-bg contrast */
+    --accent-light: #A5C378; /* logo sage-green, tints */
+    --text: #C8DCBA; /* light green-tinted text */
+    --text-mid: #7A9E6E; /* muted green for secondary text */
+    --text-light: #4E6A44; /* dim green for tertiary text */
+    --bg: #080E1E; /* very dark navy background */
+    --bg-surface: #0D1530; /* card / raised surface — dark navy */
+    --bg-white: #0D1530; /* alias kept for selector compatibility */
+    --bg-alt: #0B1228; /* alternate section navy background */
+    --border: #162045; /* dark navy border */
+    --border-strong: #1E2E58; /* slightly lighter navy border */
     --header-h: 72px;
     --subnav-h: 52px;
     --shadow-sm: 0 2px 8px rgba(0,0,0,0.30);
@@ -67,7 +67,7 @@ img {
     position: fixed;
     inset: 0 0 auto 0;
     height: var(--header-h);
-    background: rgba(13,20,16,0.88);
+    background: rgba(8,14,30,0.92);
     backdrop-filter: blur(22px) saturate(160%);
     -webkit-backdrop-filter: blur(22px) saturate(160%);
     z-index: 1000;
@@ -156,7 +156,7 @@ img {
     top: 100%;
     left: 50%;
     transform: translateX(-50%);
-    background: rgba(19,26,17,0.96);
+    background: rgba(12,19,42,0.97);
     backdrop-filter: blur(22px) saturate(160%);
     -webkit-backdrop-filter: blur(22px) saturate(160%);
     border: 1px solid rgba(107,168,50,0.20);
@@ -281,7 +281,7 @@ img {
     position: absolute;
     top: calc(100% + 6px);
     right: 0;
-    background: rgba(19,26,17,0.96);
+    background: rgba(12,19,42,0.97);
     backdrop-filter: blur(22px) saturate(160%);
     -webkit-backdrop-filter: blur(22px) saturate(160%);
     border: 1px solid rgba(107,168,50,0.20);
@@ -350,7 +350,7 @@ img {
     display: block;
     padding: 13px 48px;
     color: var(--text-mid);
-    background: rgba(19,26,17,0.96);
+    background: rgba(12,19,42,0.97);
     backdrop-filter: blur(22px) saturate(160%);
     -webkit-backdrop-filter: blur(22px) saturate(160%);
     font-size: 14px;
@@ -376,7 +376,7 @@ img {
 .sub-nav {
     position: sticky;
     top: var(--header-h);
-    background: rgba(13,20,16,0.92);
+    background: rgba(8,14,30,0.94);
     backdrop-filter: blur(20px) saturate(150%);
     -webkit-backdrop-filter: blur(20px) saturate(150%);
     border-bottom: none;
@@ -418,7 +418,7 @@ img {
 /* Background: dark gradient ensures WCAG AA contrast (all stops >12:1 against white) */
 .hero {
     position: relative;
-    background: linear-gradient(140deg, #0a1810 0%, #162038 50%, #1a3218 100%);
+    background: linear-gradient(140deg, #060C1E 0%, #0B1640 50%, #091530 100%);
     color: #fff;
     padding: 130px 24px 108px;
     text-align: center;
@@ -904,7 +904,7 @@ img {
     }
 
 .org-root-box {
-    background: linear-gradient(135deg, #162014 0%, #1E2A1C 100%);
+    background: linear-gradient(135deg, #0C1535 0%, #132060 100%);
     color: #fff;
     padding: 16px 56px;
     border-radius: 12px;
@@ -964,7 +964,7 @@ img {
     }
 
 .org-box {
-    background: rgba(19,26,17,0.92);
+    background: rgba(12,19,42,0.95);
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
     border: 1.5px solid rgba(107,168,50,0.40);
@@ -1070,7 +1070,7 @@ img {
         content: '';
         position: absolute;
         inset: 0;
-        background: linear-gradient(to bottom, transparent 50%, rgba(10,24,16,0.45) 100%);
+        background: linear-gradient(to bottom, transparent 50%, rgba(6,12,30,0.45) 100%);
         opacity: 0;
         transition: opacity 0.35s;
     }
@@ -1136,7 +1136,7 @@ img {
 /* ── Footer ─────────────────────────────────────────────── */
 .site-footer {
     position: relative;
-    background: #0A1008;
+    background: #060C1A;
     color: rgba(255,255,255,0.60);
     text-align: center;
     padding: 48px 24px 40px;
