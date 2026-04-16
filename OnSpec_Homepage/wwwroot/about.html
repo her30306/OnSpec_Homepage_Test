@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="icon" href="favicon.ico" type="image/x-icon">
     <title>회사소개 - ㈜온스펙</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
 </head>
 <body data-page="about">
@@ -70,6 +73,18 @@
 
     <!-- ══ PAGE BODY ════════════════════════════════════════════ -->
     <div class="page-body">
+
+        <!-- PAGE HERO -->
+        <section class="page-hero">
+            <div class="page-hero-inner">
+                <h1 data-i18n="nav-about">회사소개</h1>
+                <div class="page-hero-breadcrumb">
+                    <a href="index.html">Home</a>
+                    <span class="sep">›</span>
+                    <span class="current" data-i18n="nav-about">회사소개</span>
+                </div>
+            </div>
+        </section>
 
         <!-- SUB-NAV -->
         <nav class="sub-nav" id="subNav">
@@ -160,9 +175,28 @@
 
     <!-- ══ FOOTER ══════════════════════════════════════════════ -->
     <footer class="site-footer">
-        <p data-i18n="footer-addr">㈜온스펙 &nbsp;|&nbsp; 경기도 화성시 봉담읍 동화길51, 6층 669호</p>
-        <p data-i18n="footer-tel">TEL : 000-0000-0000 &nbsp;|&nbsp; kslee@on-spec.co.kr</p>
-        <p class="footer-copy">© 2026 OnSpec Co., Ltd. All rights reserved.</p>
+        <div class="footer-inner">
+            <div class="footer-col footer-col-brand">
+                <img src="res/logo.png" alt="㈜온스펙" class="footer-logo">
+                <p class="footer-tagline" data-i18n="footer-tagline">Vision 검사 Total Solution 전문기업</p>
+            </div>
+            <div class="footer-col footer-col-links">
+                <h4 data-i18n="footer-h-nav">Navigation</h4>
+                <ul>
+                    <li><a href="index.html" data-i18n="nav-home">Home</a></li>
+                    <li><a href="about.html" data-i18n="nav-about">회사소개</a></li>
+                    <li><a href="business.html" data-i18n="nav-business">사업분야</a></li>
+                </ul>
+            </div>
+            <div class="footer-col footer-col-contact">
+                <h4 data-i18n="footer-h-contact">Contact</h4>
+                <p data-i18n="footer-addr">㈜온스펙 &nbsp;|&nbsp; 경기도 화성시 봉담읍 동화길51, 6층 669호</p>
+                <p data-i18n="footer-tel">TEL : 000-0000-0000 &nbsp;|&nbsp; kslee@on-spec.co.kr</p>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p class="footer-copy">© 2026 OnSpec Co., Ltd. All rights reserved.</p>
+        </div>
     </footer>
 
     <!-- Kakao Map SDK -->
@@ -185,6 +219,24 @@
                 menuToggle.classList.remove('open');
             });
         });
+
+        /* Header scroll state */
+        (function () {
+            var header = document.querySelector('.site-header');
+            function onScroll() { header.classList.toggle('scrolled', window.scrollY > 20); }
+            window.addEventListener('scroll', onScroll, { passive: true });
+            onScroll();
+        })();
+
+        /* Scroll animations */
+        (function () {
+            var io = new IntersectionObserver(function (entries) {
+                entries.forEach(function (e) {
+                    if (e.isIntersecting) { e.target.classList.add('visible'); io.unobserve(e.target); }
+                });
+            }, { threshold: 0.1 });
+            document.querySelectorAll('.aos').forEach(function (el) { io.observe(el); });
+        })();
         const subLinks = document.querySelectorAll('#subNav a');
         const sections = document.querySelectorAll('.page-section');
 
