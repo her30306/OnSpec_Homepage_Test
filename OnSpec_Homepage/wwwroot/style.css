@@ -462,7 +462,7 @@ img {
         transparent 100%
     );
     filter: blur(90px);
-    animation: scanBeam 4s cubic-bezier(0.42, 0, 0.58, 1) infinite;
+    animation: scanBeam 8s cubic-bezier(0.42, 0, 0.58, 1) infinite;
     z-index: 1;
     pointer-events: none;
 }
@@ -661,7 +661,7 @@ img {
     .overview-title .section-tag {
         display: block;
         background: none;
-        color: var(--primary);
+        color: var(--accent-dark);
         font-size: 38px;
         font-weight: 800;
         letter-spacing: -0.025em;
@@ -670,13 +670,8 @@ img {
         border-radius: 0;
         margin-bottom: 12px;
         border: none;
-        transition: text-shadow 0.25s;
         cursor: default;
     }
-
-        .overview-title .section-tag:hover {
-            text-shadow: 0 4px 24px rgba(107,168,50,0.35), 0 1px 8px rgba(107,168,50,0.18);
-        }
 
     .overview-title h2 {
         font-size: 32px;
