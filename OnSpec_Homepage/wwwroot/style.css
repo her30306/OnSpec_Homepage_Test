@@ -19,7 +19,7 @@
     --bg-white: #FFFFFF;
     --bg-alt: #EDF2E8;
     --border: #BCD4A0;        /* was #D4E4BC — darkened for better contrast */
-    --border-strong: #A8C888; /* softened — was #96BA72, now with shadow glow instead */
+    --border-strong: #A8C888; /* softened — replaces hard border lines with shadow glow on key elements */
     --header-h: 72px;
     --subnav-h: 52px;
     --shadow-sm: 0 2px 8px rgba(0,0,0,0.06);
@@ -435,7 +435,7 @@ img {
     pointer-events: none;
 }
 
-/* Thick soft-glow scanline sweeping top → bottom */
+
 
 @media (prefers-reduced-motion: reduce) {
     .hero::after,
@@ -444,7 +444,7 @@ img {
     }
 }
 
-/* Thick soft-glow scanline sweeping top → bottom */
+/* Diffuse soft-glow area sweeping top → bottom */
 .hero::after {
     content: '';
     position: absolute;
