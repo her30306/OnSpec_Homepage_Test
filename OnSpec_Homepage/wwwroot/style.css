@@ -405,6 +405,7 @@ img {
             }
 
 /* ── Hero (index.html) ──────────────────────────────────── */
+/* Background: dark gradient ensures WCAG AA contrast — white text on #162038 yields ~9:1 ratio */
 .hero {
     position: relative;
     background: linear-gradient(140deg, #0a1810 0%, #162038 50%, #1a3218 100%);
@@ -427,7 +428,7 @@ img {
     pointer-events: none;
 }
 
-/* Animated scan-line — replaced with radar rings via .hero-rings */
+/* Radar rings animation (replaces scanline) — see .hero-rings below */
 
 @media (prefers-reduced-motion: reduce) {
     .hero-rings span,
