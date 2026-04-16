@@ -94,7 +94,6 @@ img {
     .logo img {
         height: 44px;
         width: auto;
-        mix-blend-mode: multiply; /* white areas blend into header glass bg */
     }
 
 /* Desktop nav */
