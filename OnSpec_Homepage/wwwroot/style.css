@@ -462,7 +462,7 @@ img {
         transparent 100%
     );
     filter: blur(90px);
-    animation: scanBeam 6s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    animation: scanBeam 4s cubic-bezier(0.42, 0, 0.58, 1) infinite;
     z-index: 1;
     pointer-events: none;
 }
@@ -659,18 +659,24 @@ img {
 }
 
     .overview-title .section-tag {
-        display: inline-block;
-        background: var(--bg-alt);
-        color: var(--accent-dark);
-        font-size: 11.5px;
-        font-weight: 700;
-        letter-spacing: 0.10em;
-        text-transform: uppercase;
-        padding: 5px 14px;
-        border-radius: 100px;
-        margin-bottom: 14px;
-        border: 1px solid var(--border-strong);
+        display: block;
+        background: none;
+        color: var(--primary);
+        font-size: 38px;
+        font-weight: 800;
+        letter-spacing: -0.025em;
+        text-transform: none;
+        padding: 0;
+        border-radius: 0;
+        margin-bottom: 12px;
+        border: none;
+        transition: text-shadow 0.25s;
+        cursor: default;
     }
+
+        .overview-title .section-tag:hover {
+            text-shadow: 0 4px 24px rgba(107,168,50,0.35), 0 1px 8px rgba(107,168,50,0.18);
+        }
 
     .overview-title h2 {
         font-size: 32px;
@@ -967,6 +973,7 @@ img {
 }
 
     .org-box:hover {
+        box-shadow: 0 8px 28px rgba(107,168,50,0.28), 0 2px 8px rgba(0,0,0,0.10);
     }
 
 /* Location / Map */
@@ -1001,7 +1008,12 @@ img {
     border-radius: 8px;
     border: 1px solid var(--border-strong);
     box-shadow: 0 1px 5px rgba(0,0,0,0.04), 0 0 0 3px rgba(107,168,50,0.04);
+    transition: box-shadow 0.22s;
 }
+
+    .contact-item:hover {
+        box-shadow: 0 6px 24px rgba(107,168,50,0.22), 0 2px 8px rgba(0,0,0,0.08);
+    }
 
 .contact-label {
     font-weight: 600;
@@ -1223,8 +1235,8 @@ img {
         padding: 48px 20px 60px;
     }
 
-    .overview-title h2 {
-        font-size: 24px;
+    .overview-title .section-tag {
+        font-size: 28px;
     }
 
     .overview-grid {
