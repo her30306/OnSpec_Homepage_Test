@@ -469,8 +469,8 @@ img {
 
 @keyframes scanBeam {
     0%   { top: -320px;            opacity: 0; }
-    8%   { opacity: 1; }
-    92%  { opacity: 0.9; }
+    3%   { opacity: 1; }
+    97%  { opacity: 0.9; }
     100% { top: calc(100% + 320px); opacity: 0; }
 }
 
