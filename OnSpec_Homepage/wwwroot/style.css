@@ -18,7 +18,7 @@
     --bg: #F5F7F4;
     --bg-white: #FFFFFF;
     --bg-alt: #EDF2E8;
-    --border: #BCD4A0;        /* was #D4E4BC — darkened for better contrast */
+    --border: #BCD4A0; /* was #D4E4BC — darkened for better contrast */
     --border-strong: #A8C888; /* softened — replaces hard border lines with shadow glow on key elements */
     --header-h: 72px;
     --subnav-h: 52px;
@@ -143,9 +143,9 @@ img {
                     color: var(--accent);
                 }
 
-                .main-nav > ul > li > a:hover::after {
-                    transform: scaleX(1);
-                }
+                    .main-nav > ul > li > a:hover::after {
+                        transform: scaleX(1);
+                    }
 
 /* Dropdown */
 .dropdown {
@@ -270,9 +270,9 @@ img {
     transition: transform 0.2s;
 }
 
-    .lang-select.open .lang-select__arrow {
-        transform: rotate(180deg);
-    }
+.lang-select.open .lang-select__arrow {
+    transform: rotate(180deg);
+}
 
 .lang-select__menu {
     display: none;
@@ -292,9 +292,9 @@ img {
     padding: 4px 0;
 }
 
-    .lang-select.open .lang-select__menu {
-        display: block;
-    }
+.lang-select.open .lang-select__menu {
+    display: block;
+}
 
 .lang-select__item {
     padding: 10px 16px;
@@ -423,18 +423,16 @@ img {
     overflow: hidden;
 }
 
-/* Tech grid pattern overlay */
-.hero::before {
-    content: '';
-    position: absolute;
-    inset: 0;
-    background-image:
-        linear-gradient(rgba(107,168,50,0.07) 1px, transparent 1px),
-        linear-gradient(90deg, rgba(107,168,50,0.07) 1px, transparent 1px);
-    background-size: 64px 64px;
-    z-index: 0;
-    pointer-events: none;
-}
+    /* Tech grid pattern overlay */
+    .hero::before {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background-image: linear-gradient(rgba(107,168,50,0.07) 1px, transparent 1px), linear-gradient(90deg, rgba(107,168,50,0.07) 1px, transparent 1px);
+        background-size: 64px 64px;
+        z-index: 0;
+        pointer-events: none;
+    }
 
 
 
@@ -468,15 +466,27 @@ img {
 }
 
 @keyframes scanBeam {
-    0%   { top: -320px;            opacity: 0; }
-    3%   { opacity: 1; }
-    97%  { opacity: 0.9; }
-    100% { top: calc(100% + 320px); opacity: 0; }
+    0% {
+        top: -320px;
+        opacity: 1;
+    }
+
+    100% {
+        top: calc(100%);
+        opacity: 1;
+    }
 }
 
 @keyframes pulse-dot {
-    0%, 100% { opacity: 1;   transform: scale(1); }
-    50%       { opacity: 0.4; transform: scale(0.75); }
+    0%, 100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 0.4;
+        transform: scale(0.75);
+    }
 }
 
 .hero-inner {
@@ -502,15 +512,15 @@ img {
     margin-bottom: 26px;
 }
 
-.hero-badge::before {
-    content: '';
-    flex-shrink: 0;
-    width: 6px;
-    height: 6px;
-    background: var(--accent);
-    border-radius: 50%;
-    animation: pulse-dot 2s ease-in-out infinite;
-}
+    .hero-badge::before {
+        content: '';
+        flex-shrink: 0;
+        width: 6px;
+        height: 6px;
+        background: var(--accent);
+        border-radius: 50%;
+        animation: pulse-dot 2s ease-in-out infinite;
+    }
 
 .hero h1 {
     font-size: 48px;
@@ -739,20 +749,20 @@ img {
     opacity: 0.75;
 }
 
-    .overview-card h3 {
-        font-size: 18px;
-        font-weight: 700;
-        color: var(--primary);
-        margin-bottom: 12px;
-        padding-bottom: 12px;
-        border-bottom: 1px solid var(--border-strong);
-    }
+.overview-card h3 {
+    font-size: 18px;
+    font-weight: 700;
+    color: var(--primary);
+    margin-bottom: 12px;
+    padding-bottom: 12px;
+    border-bottom: 1px solid var(--border-strong);
+}
 
-    .overview-card p {
-        font-size: 14px;
-        color: var(--text-mid);
-        line-height: 1.7;
-    }
+.overview-card p {
+    font-size: 14px;
+    color: var(--text-mid);
+    line-height: 1.7;
+}
 
 .card-arrow {
     display: inline-flex;
@@ -772,10 +782,10 @@ img {
         font-size: 13px;
     }
 
-    .overview-card:hover .card-arrow {
-        opacity: 1;
-        transform: translateX(0);
-    }
+.overview-card:hover .card-arrow {
+    opacity: 1;
+    transform: translateX(0);
+}
 
 /* ── Page sections (about & business) ──────────────────── */
 .page-section {
@@ -824,7 +834,7 @@ img {
         letter-spacing: -0.02em;
     }
 
-/* Profile */
+/* Company Overview */
 .profile-intro {
     font-size: 15.5px;
     line-height: 1.85;

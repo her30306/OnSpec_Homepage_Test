@@ -23,7 +23,7 @@ var TRANSLATIONS = {
         'footer-tel':  'TEL : 000-0000-0000 &nbsp;|&nbsp; kslee@on-spec.co.kr',
 
         /* ── index.html ── */
-        'hero-badge':         'Since 2006 · 20년 Vision 검사 기술력',
+        'hero-badge':         '20년 Vision 검사 기술력',
         'hero-title':         'Vision 검사 <em>Total Solution</em><br>전문기업',
         'hero-desc':          '㈜온스펙은 2006년부터 20년간 Vision 검사 분야에서 축적된 전문 기술력을 바탕으로<br>광학설계, S/W개발, 딥러닝을 아우르는 Total 검사 솔루션을 제공합니다.',
         'hero-btn-about':     '회사소개',
@@ -42,7 +42,7 @@ var TRANSLATIONS = {
         'stat-ai':            '딥러닝 검사 솔루션',
 
         /* ── Sub-nav / section headings (about) ── */
-        'sub-profile':    '프로필',
+        'sub-profile':    '기업 개요',
         'sub-orgchart':   '조직도',
         'sub-location':   '오시는 길',
         'sub-contact':    '연락처',
@@ -54,8 +54,8 @@ var TRANSLATIONS = {
         'sub-display':    '디스플레이',
 
         /* ── Business section sub-headings ── */
-        'biz-h3-machine':   '장비',
-        'biz-h3-features':  '특징',
+        'biz-h3-machine':   '검사기',
+        'biz-h3-features':  '핵심 기술',
 
         /* ── Contact label ── */
         'label-contact':  '연락처',
@@ -148,8 +148,8 @@ var TRANSLATIONS = {
         'stat-ai':            'Deep Learning Solution',
 
         /* ── Sub-nav / section headings (about) ── */
-        'sub-profile':    'Profile',
-        'sub-orgchart':   'Org Chart',
+        'sub-profile':    'Company Overview',
+        'sub-orgchart':   'Organization Chart',
         'sub-location':   'Location',
         'sub-contact':    'Contact',
 
@@ -161,7 +161,7 @@ var TRANSLATIONS = {
 
         /* ── Business section sub-headings ── */
         'biz-h3-machine':   'Machine',
-        'biz-h3-features':  'Features',
+        'biz-h3-features':  'Core Technologies',
 
         /* ── Contact label ── */
         'label-contact':  'Contact',
