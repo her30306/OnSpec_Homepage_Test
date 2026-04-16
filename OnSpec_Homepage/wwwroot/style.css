@@ -18,7 +18,8 @@
     --bg: #F5F7F4;
     --bg-white: #FFFFFF;
     --bg-alt: #EDF2E8;
-    --border: #D4E4BC;
+    --border: #BCD4A0;        /* was #D4E4BC — darkened for better contrast */
+    --border-strong: #96BA72; /* stronger separator line */
     --header-h: 72px;
     --subnav-h: 52px;
     --shadow-sm: 0 2px 8px rgba(0,0,0,0.06);
@@ -68,7 +69,7 @@ img {
     backdrop-filter: blur(12px);
     -webkit-backdrop-filter: blur(12px);
     z-index: 1000;
-    box-shadow: 0 1px 0 var(--border), 0 4px 20px rgba(0,0,0,0.06);
+    box-shadow: 0 1px 0 var(--border-strong), 0 4px 20px rgba(0,0,0,0.10);
     transition: box-shadow var(--transition);
 }
 
@@ -93,6 +94,7 @@ img {
     .logo img {
         height: 44px;
         width: auto;
+        mix-blend-mode: multiply; /* white areas blend into header glass bg */
     }
 
 /* Desktop nav */
@@ -368,7 +370,7 @@ img {
     position: sticky;
     top: var(--header-h);
     background: var(--bg-white);
-    border-bottom: 2px solid var(--accent);
+    border-bottom: 2px solid var(--border-strong);
     z-index: 100;
     overflow-x: auto;
     white-space: nowrap;
@@ -425,38 +427,59 @@ img {
     pointer-events: none;
 }
 
-/* Animated scan-line */
-.hero::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    right: 0;
-    top: -2px;
-    height: 2px;
-    background: linear-gradient(90deg, transparent 0%, var(--accent-light) 25%, var(--accent) 50%, var(--accent-light) 75%, transparent 100%);
-    animation: scanline 8s linear infinite;
-    z-index: 1;
-    opacity: 0;
-    pointer-events: none;
-}
+/* Animated scan-line — replaced with radar rings via .hero-rings */
 
 @media (prefers-reduced-motion: reduce) {
-    .hero::after,
+    .hero-rings span,
     .hero-badge::before {
         animation: none;
     }
 }
 
-@keyframes scanline {
-    0%   { top: -2px;   opacity: 0; }
-    4%   { opacity: 0.55; }
-    96%  { opacity: 0.55; }
-    100% { top: calc(100% + 2px); opacity: 0; }
+@keyframes radarRing {
+    0% {
+        transform: translate(-50%, -50%) scale(0.1);
+        opacity: 0.8;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0;
+    }
 }
 
 @keyframes pulse-dot {
     0%, 100% { opacity: 1;   transform: scale(1); }
     50%       { opacity: 0.4; transform: scale(0.75); }
+}
+
+/* ── Hero radar rings ───────────────────────────────────── */
+.hero-rings {
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    overflow: hidden;
+}
+
+.hero-rings span {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    width: min(90vw, 600px);
+    height: min(90vw, 600px);
+    border-radius: 50%;
+    border: 1px solid rgba(107, 168, 50, 0.40);
+    transform: translate(-50%, -50%) scale(0.1);
+    animation: radarRing 5s cubic-bezier(0.15, 0.5, 0.3, 1) infinite;
+    opacity: 0;
+}
+
+.hero-rings span:nth-child(2) {
+    animation-delay: -1.67s;
+}
+
+.hero-rings span:nth-child(3) {
+    animation-delay: -3.33s;
 }
 
 .hero-inner {
@@ -567,7 +590,7 @@ img {
 /* ── Stats bar (index.html) ─────────────────────────────── */
 .stats-section {
     background: var(--bg-white);
-    border-bottom: 1px solid var(--border);
+    border-bottom: 1px solid var(--border-strong);
 }
 
 .stats-inner {
@@ -587,7 +610,7 @@ img {
     justify-content: center;
     padding: 32px 20px;
     gap: 6px;
-    border-right: 1px solid var(--border);
+    border-right: 1px solid var(--border-strong);
     transition: background var(--transition);
 }
 
@@ -644,7 +667,7 @@ img {
         padding: 5px 14px;
         border-radius: 100px;
         margin-bottom: 14px;
-        border: 1px solid var(--border);
+        border: 1px solid var(--border-strong);
     }
 
     .overview-title h2 {
@@ -700,7 +723,7 @@ img {
     .overview-card:hover {
         box-shadow: var(--shadow-green), var(--shadow-md);
         transform: translateY(-4px);
-        border-color: var(--accent-light);
+        border-color: var(--border-strong);
     }
 
 .card-num {
@@ -719,7 +742,7 @@ img {
         color: var(--primary);
         margin-bottom: 12px;
         padding-bottom: 12px;
-        border-bottom: 1px solid var(--border);
+        border-bottom: 1px solid var(--border-strong);
     }
 
     .overview-card p {
@@ -754,7 +777,7 @@ img {
 /* ── Page sections (about & business) ──────────────────── */
 .page-section {
     padding: 72px 0;
-    border-bottom: 1px solid var(--border);
+    border-bottom: 1px solid var(--border-strong);
     scroll-margin-top: calc(var(--header-h) + var(--subnav-h));
 }
 
@@ -819,7 +842,7 @@ img {
     display: flex;
     gap: 12px;
     padding: 14px 0;
-    border-bottom: 1px solid var(--border);
+    border-bottom: 1px solid var(--border-strong);
     font-size: 15px;
 }
 
@@ -938,7 +961,7 @@ img {
     height: 440px;
     border-radius: 8px;
     overflow: hidden;
-    border: 1px solid var(--border);
+    border: 1px solid var(--border-strong);
     box-shadow: 0 2px 14px rgba(0,0,0,0.09);
 }
 
@@ -962,7 +985,7 @@ img {
     padding: 18px 24px;
     background: var(--bg-white);
     border-radius: 8px;
-    border: 1px solid var(--border);
+    border: 1px solid var(--border-strong);
     box-shadow: 0 1px 5px rgba(0,0,0,0.04);
 }
 
@@ -1040,7 +1063,7 @@ img {
     color: var(--primary);
     margin-bottom: 12px;
     padding-bottom: 8px;
-    border-bottom: 1px solid var(--border);
+    border-bottom: 1px solid var(--border-strong);
 }
 
     .biz-detail h3:not(:first-child) {
@@ -1057,7 +1080,7 @@ img {
         padding: 7px 0 7px 16px;
         font-size: 14px;
         color: var(--text-mid);
-        border-bottom: 1px dashed var(--border);
+        border-bottom: 1px dashed var(--border-strong);
         line-height: 1.6;
     }
 
@@ -1165,12 +1188,12 @@ img {
     .stat-item {
         flex: 0 0 50%;
         border-right: none;
-        border-bottom: 1px solid var(--border);
+        border-bottom: 1px solid var(--border-strong);
         padding: 22px 16px;
     }
 
         .stat-item:nth-child(odd) {
-            border-right: 1px solid var(--border);
+            border-right: 1px solid var(--border-strong);
         }
 
         .stat-item:nth-last-child(-n+2) {
