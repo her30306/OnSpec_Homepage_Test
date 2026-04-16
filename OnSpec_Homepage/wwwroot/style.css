@@ -154,10 +154,12 @@ img {
     top: 100%;
     left: 50%;
     transform: translateX(-50%);
-    background: var(--bg-white);
-    border: 1px solid var(--border);
-    border-radius: 6px;
-    box-shadow: 0 8px 28px rgba(0,0,0,0.14);
+    background: rgba(255,255,255,0.72);
+    backdrop-filter: blur(22px) saturate(160%);
+    -webkit-backdrop-filter: blur(22px) saturate(160%);
+    border: 1px solid rgba(255,255,255,0.55);
+    border-radius: 10px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.12), 0 2px 8px rgba(107,168,50,0.08);
     list-style: none;
     min-width: 148px;
     overflow: hidden;
@@ -277,10 +279,12 @@ img {
     position: absolute;
     top: calc(100% + 6px);
     right: 0;
-    background: var(--bg-white);
-    border: 1px solid var(--border);
-    border-radius: 6px;
-    box-shadow: 0 8px 28px rgba(0,0,0,0.14);
+    background: rgba(255,255,255,0.72);
+    backdrop-filter: blur(22px) saturate(160%);
+    -webkit-backdrop-filter: blur(22px) saturate(160%);
+    border: 1px solid rgba(255,255,255,0.55);
+    border-radius: 10px;
+    box-shadow: 0 8px 32px rgba(0,0,0,0.12), 0 2px 8px rgba(107,168,50,0.08);
     list-style: none;
     min-width: 110px;
     overflow: hidden;
@@ -369,8 +373,11 @@ img {
 .sub-nav {
     position: sticky;
     top: var(--header-h);
-    background: var(--bg-white);
-    border-bottom: 2px solid var(--border-strong);
+    background: rgba(255,255,255,0.60);
+    backdrop-filter: blur(20px) saturate(150%);
+    -webkit-backdrop-filter: blur(20px) saturate(150%);
+    border-bottom: none;
+    box-shadow: 0 2px 0 rgba(107,168,50,0.18), 0 4px 16px rgba(0,0,0,0.07);
     z-index: 100;
     overflow-x: auto;
     white-space: nowrap;
@@ -441,29 +448,29 @@ img {
 .hero::after {
     content: '';
     position: absolute;
-    left: -10%;
-    right: -10%;
-    top: -80px;
-    height: 80px;
+    left: -20%;
+    right: -20%;
+    top: -160px;
+    height: 160px;
     background: linear-gradient(
         to bottom,
         transparent 0%,
-        rgba(107, 168, 50, 0.18) 30%,
-        rgba(165, 195, 120, 0.38) 50%,
-        rgba(107, 168, 50, 0.18) 70%,
+        rgba(107, 168, 50, 0.06) 25%,
+        rgba(165, 195, 120, 0.13) 50%,
+        rgba(107, 168, 50, 0.06) 75%,
         transparent 100%
     );
-    filter: blur(18px);
-    animation: scanBeam 9s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    filter: blur(40px);
+    animation: scanBeam 11s cubic-bezier(0.4, 0, 0.6, 1) infinite;
     z-index: 1;
     pointer-events: none;
 }
 
 @keyframes scanBeam {
-    0%   { top: -80px;            opacity: 0; }
-    5%   { opacity: 1; }
-    95%  { opacity: 0.85; }
-    100% { top: calc(100% + 80px); opacity: 0; }
+    0%   { top: -160px;            opacity: 0; }
+    8%   { opacity: 1; }
+    92%  { opacity: 0.9; }
+    100% { top: calc(100% + 160px); opacity: 0; }
 }
 
 @keyframes pulse-dot {
@@ -862,12 +869,12 @@ img {
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 16px 0 8px;
+    padding: 24px 0 16px;
 }
 
 .org-root {
     position: relative;
-    padding-bottom: 36px;
+    padding-bottom: 40px;
 }
 
     .org-root::after {
@@ -877,18 +884,19 @@ img {
         left: 50%;
         transform: translateX(-50%);
         width: 2px;
-        height: 36px;
-        background: var(--accent);
+        height: 40px;
+        background: linear-gradient(to bottom, var(--accent), rgba(107,168,50,0.20));
     }
 
 .org-root-box {
-    background: var(--primary);
+    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
     color: #fff;
-    padding: 14px 52px;
-    border-radius: 6px;
+    padding: 16px 56px;
+    border-radius: 12px;
     font-weight: 700;
     font-size: 16px;
-    box-shadow: 0 4px 14px rgba(0,0,0,0.18);
+    letter-spacing: 0.03em;
+    box-shadow: 0 6px 24px rgba(0,0,0,0.22), 0 0 0 1px rgba(255,255,255,0.08) inset;
 }
 
 .org-branches {
@@ -900,7 +908,7 @@ img {
 
 .org-branch {
     flex: 1;
-    padding-top: 36px;
+    padding-top: 40px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -915,15 +923,17 @@ img {
         left: 0;
         right: 0;
         height: 2px;
-        background: var(--accent);
+        background: linear-gradient(to right, rgba(107,168,50,0.15), var(--accent) 30%, var(--accent) 70%, rgba(107,168,50,0.15));
     }
 
     .org-branch:first-child::before {
         left: 50%;
+        background: linear-gradient(to right, var(--accent), var(--accent) 70%, rgba(107,168,50,0.15));
     }
 
     .org-branch:last-child::before {
         right: 50%;
+        background: linear-gradient(to right, rgba(107,168,50,0.15), var(--accent) 30%, var(--accent));
     }
 
     /* Vertical drop connector */
@@ -934,22 +944,30 @@ img {
         left: 50%;
         transform: translateX(-50%);
         width: 2px;
-        height: 36px;
-        background: var(--accent);
+        height: 40px;
+        background: linear-gradient(to bottom, var(--accent), rgba(107,168,50,0.25));
     }
 
 .org-box {
-    background: var(--bg-white);
-    border: 2px solid var(--accent);
+    background: rgba(255,255,255,0.82);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border: 1.5px solid rgba(107,168,50,0.45);
     color: var(--primary);
-    padding: 11px 18px;
-    border-radius: 6px;
+    padding: 12px 20px;
+    border-radius: 10px;
     font-size: 14px;
     font-weight: 600;
     white-space: nowrap;
     text-align: center;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+    box-shadow: 0 4px 16px rgba(107,168,50,0.10), 0 1px 4px rgba(0,0,0,0.07);
+    transition: box-shadow 0.22s, transform 0.22s;
 }
+
+    .org-box:hover {
+        box-shadow: 0 8px 28px rgba(107,168,50,0.22), 0 2px 8px rgba(0,0,0,0.10);
+        transform: translateY(-2px);
+    }
 
 /* Location / Map */
 #map-container {
