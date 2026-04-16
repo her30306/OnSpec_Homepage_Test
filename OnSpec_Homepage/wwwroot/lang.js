@@ -61,7 +61,7 @@ var TRANSLATIONS = {
 
         /* ── Contact label ── */
         'label-tel':      '전화',
-        'label-fax':      '팩스',
+        //'label-fax':      '팩스',
         'label-contact':  '메일',
 
         /* ── about.html ── */
@@ -135,9 +135,9 @@ var TRANSLATIONS = {
         'footer-tel':  'TEL : 000-0000-0000 &nbsp;|&nbsp; kslee@on-spec.co.kr',
 
         /* ── index.html ── */
-        'hero-badge':         'Since 2006 · 20 Years of Vision Inspection',
+        'hero-badge':         '20 Years of Vision Inspection',
         'hero-title':         'Vision Inspection <em>Total Solution</em><br>Specialist',
-        'hero-desc':          'OnSpec Co., Ltd., built on 20 years of expertise in Vision inspection since 2006,<br>provides Total inspection solutions spanning optical design, S/W development, and deep learning.',
+        'hero-desc':          'OnSpec Co., Ltd., built on 20 years of expertise in Vision inspection field since 2006,<br>provides Total inspection solutions spanning optical design, S/W development, and deep learning.',
         'hero-btn-about':     'About Us',
         'hero-btn-business':  'View Business',
         'overview-tag':       'Business Areas',
@@ -173,7 +173,7 @@ var TRANSLATIONS = {
 
         /* ── Contact label ── */
         'label-tel':      'TEL',
-        'label-fax':      'FAX',
+        //'label-fax':      'FAX',
         'label-contact':  'MAIL',
 
         /* ── about.html ── */
