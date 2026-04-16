@@ -3,29 +3,30 @@
    Color theme derived from res/logo.png:
      Charcoal  #3C3C3C  (logo text)
      Sage-green #A5C378  (logo accent)
+   Dark theme: deep dark green-tinted backgrounds, green accents preserved
    ============================================================ */
 
 /* ── Variables ──────────────────────────────────────────── */
 :root {
-    --primary: #1E2B3A; /* dark navy-charcoal header */
-    --primary-light: #2C3E52;
-    --accent: #6BA832; /* vivid green from logo */
-    --accent-dark: #527A22;
-    --accent-light: #A5C378; /* logo sage-green, tints */
-    --text: #2D2D2D;
-    --text-mid: #555555;
-    --text-light: #888888;
-    --bg: #F5F7F4;
-    --bg-white: #FFFFFF;
-    --bg-alt: #EDF2E8;
-    --border: #BCD4A0; /* was #D4E4BC — darkened for better contrast */
-    --border-strong: #A8C888; /* softened — replaces hard border lines with shadow glow on key elements */
+    --primary: #C0DEAA; /* light sage-green for headings/labels on dark bg */
+    --primary-light: #A0C488; /* slightly muted green variant */
+    --accent: #6BA832; /* vivid green from logo — preserved */
+    --accent-dark: #7DC23A; /* slightly brightened for dark bg contrast */
+    --accent-light: #A5C378; /* logo sage-green, tints — preserved */
+    --text: #D6EAC8; /* light greenish-white text */
+    --text-mid: #8AAF78; /* muted green-gray */
+    --text-light: #5C7A50; /* dim green-gray */
+    --bg: #0D1410; /* very dark green-tinted background */
+    --bg-white: #131A11; /* card / "white" surfaces in dark theme */
+    --bg-alt: #182016; /* alternate section dark background */
+    --border: #253520; /* dark green border */
+    --border-strong: #2E4428; /* slightly lighter dark border */
     --header-h: 72px;
     --subnav-h: 52px;
-    --shadow-sm: 0 2px 8px rgba(0,0,0,0.06);
-    --shadow-md: 0 6px 24px rgba(0,0,0,0.10);
-    --shadow-lg: 0 16px 48px rgba(0,0,0,0.14);
-    --shadow-green: 0 8px 28px rgba(107,168,50,0.14);
+    --shadow-sm: 0 2px 8px rgba(0,0,0,0.30);
+    --shadow-md: 0 6px 24px rgba(0,0,0,0.45);
+    --shadow-lg: 0 16px 48px rgba(0,0,0,0.60);
+    --shadow-green: 0 8px 28px rgba(107,168,50,0.20);
     --transition: 0.22s ease;
 }
 
@@ -65,11 +66,11 @@ img {
     position: fixed;
     inset: 0 0 auto 0;
     height: var(--header-h);
-    background: rgba(255,255,255,0.55);
+    background: rgba(13,20,16,0.88);
     backdrop-filter: blur(22px) saturate(160%);
     -webkit-backdrop-filter: blur(22px) saturate(160%);
     z-index: 1000;
-    box-shadow: 0 1px 0 var(--border-strong), 0 4px 20px rgba(0,0,0,0.08);
+    box-shadow: 0 1px 0 var(--border-strong), 0 4px 20px rgba(0,0,0,0.40);
     transition: box-shadow var(--transition);
 }
 
@@ -94,7 +95,7 @@ img {
     .logo img {
         height: 44px;
         width: auto;
-        mix-blend-mode: multiply; /* white areas blend into header glass bg */
+        filter: brightness(0) invert(1); /* invert logo for dark background */
     }
 
 /* Desktop nav */
@@ -154,12 +155,12 @@ img {
     top: 100%;
     left: 50%;
     transform: translateX(-50%);
-    background: rgba(255,255,255,0.88);
+    background: rgba(19,26,17,0.96);
     backdrop-filter: blur(22px) saturate(160%);
     -webkit-backdrop-filter: blur(22px) saturate(160%);
-    border: 1px solid rgba(255,255,255,0.65);
+    border: 1px solid rgba(107,168,50,0.20);
     border-radius: 10px;
-    box-shadow: 0 8px 32px rgba(0,0,0,0.12), 0 2px 8px rgba(107,168,50,0.08);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.50), 0 2px 8px rgba(107,168,50,0.10);
     list-style: none;
     min-width: 148px;
     overflow: hidden;
@@ -279,12 +280,12 @@ img {
     position: absolute;
     top: calc(100% + 6px);
     right: 0;
-    background: rgba(255,255,255,0.88);
+    background: rgba(19,26,17,0.96);
     backdrop-filter: blur(22px) saturate(160%);
     -webkit-backdrop-filter: blur(22px) saturate(160%);
-    border: 1px solid rgba(255,255,255,0.65);
+    border: 1px solid rgba(107,168,50,0.20);
     border-radius: 10px;
-    box-shadow: 0 8px 32px rgba(0,0,0,0.12), 0 2px 8px rgba(107,168,50,0.08);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.50), 0 2px 8px rgba(107,168,50,0.10);
     list-style: none;
     min-width: 110px;
     overflow: hidden;
@@ -341,19 +342,19 @@ img {
         color: var(--text-mid);
         font-size: 16px;
         font-weight: 500;
-        border-bottom: 1px solid rgba(255,255,255,0.1);
+        border-bottom: 1px solid rgba(107,168,50,0.12);
     }
 
 .mobile-sub li a {
     display: block;
     padding: 13px 48px;
     color: var(--text-mid);
-    background: rgba(255,255,255,0.88);
+    background: rgba(19,26,17,0.96);
     backdrop-filter: blur(22px) saturate(160%);
     -webkit-backdrop-filter: blur(22px) saturate(160%);
     font-size: 14px;
     font-weight: 500;
-    border-bottom: 1px solid rgba(255,255,255,0.65);
+    border-bottom: 1px solid rgba(107,168,50,0.12);
     border-left: 3px solid transparent;
     transition: color 0.18s, border-color 0.18s, background 0.18s;
 }
@@ -374,11 +375,11 @@ img {
 .sub-nav {
     position: sticky;
     top: var(--header-h);
-    background: rgba(255,255,255,0.60);
+    background: rgba(13,20,16,0.92);
     backdrop-filter: blur(20px) saturate(150%);
     -webkit-backdrop-filter: blur(20px) saturate(150%);
     border-bottom: none;
-    box-shadow: 0 2px 0 rgba(107,168,50,0.18), 0 4px 16px rgba(0,0,0,0.07);
+    box-shadow: 0 2px 0 rgba(107,168,50,0.25), 0 4px 16px rgba(0,0,0,0.35);
     z-index: 100;
     overflow-x: auto;
     white-space: nowrap;
@@ -902,14 +903,14 @@ img {
     }
 
 .org-root-box {
-    background: linear-gradient(135deg, var(--primary) 0%, var(--primary-light) 100%);
+    background: linear-gradient(135deg, #162014 0%, #1E2A1C 100%);
     color: #fff;
     padding: 16px 56px;
     border-radius: 12px;
     font-weight: 700;
     font-size: 16px;
     letter-spacing: 0.03em;
-    box-shadow: 0 6px 24px rgba(0,0,0,0.22), 0 0 0 1px rgba(255,255,255,0.08) inset;
+    box-shadow: 0 6px 24px rgba(0,0,0,0.50), 0 0 0 1px rgba(107,168,50,0.15) inset;
 }
 
 .org-branches {
@@ -962,18 +963,18 @@ img {
     }
 
 .org-box {
-    background: rgba(255,255,255,0.82);
+    background: rgba(19,26,17,0.92);
     backdrop-filter: blur(8px);
     -webkit-backdrop-filter: blur(8px);
-    border: 1.5px solid rgba(107,168,50,0.45);
-    color: var(--primary);
+    border: 1.5px solid rgba(107,168,50,0.40);
+    color: var(--text);
     padding: 12px 20px;
     border-radius: 10px;
     font-size: 14px;
     font-weight: 600;
     white-space: nowrap;
     text-align: center;
-    box-shadow: 0 4px 16px rgba(107,168,50,0.10), 0 1px 4px rgba(0,0,0,0.07);
+    box-shadow: 0 4px 16px rgba(107,168,50,0.12), 0 1px 4px rgba(0,0,0,0.30);
     transition: box-shadow 0.22s, transform 0.22s;
 }
 
@@ -1134,7 +1135,7 @@ img {
 /* ── Footer ─────────────────────────────────────────────── */
 .site-footer {
     position: relative;
-    background: var(--primary);
+    background: #0A1008;
     color: rgba(255,255,255,0.60);
     text-align: center;
     padding: 48px 24px 40px;
