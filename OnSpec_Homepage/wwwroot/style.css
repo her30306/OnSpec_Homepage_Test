@@ -348,10 +348,12 @@ img {
     display: block;
     padding: 13px 48px;
     color: var(--text-mid);
-    background: var(--bg-white);
+    background: rgba(255,255,255,0.88);
+    backdrop-filter: blur(22px) saturate(160%);
+    -webkit-backdrop-filter: blur(22px) saturate(160%);
     font-size: 14px;
     font-weight: 500;
-    border-bottom: 1px solid var(--border);
+    border-bottom: 1px solid rgba(255,255,255,0.65);
     border-left: 3px solid transparent;
     transition: color 0.18s, border-color 0.18s, background 0.18s;
 }
@@ -449,8 +451,8 @@ img {
     position: absolute;
     left: -20%;
     right: -20%;
-    top: -240px;
-    height: 240px;
+    top: -320px;
+    height: 320px;
     background: linear-gradient(
         to bottom,
         transparent 0%,
@@ -459,17 +461,17 @@ img {
         rgba(107, 168, 50, 0.10) 75%,
         transparent 100%
     );
-    filter: blur(60px);
-    animation: scanBeam 9s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+    filter: blur(90px);
+    animation: scanBeam 6s cubic-bezier(0.4, 0, 0.6, 1) infinite;
     z-index: 1;
     pointer-events: none;
 }
 
 @keyframes scanBeam {
-    0%   { top: -240px;            opacity: 0; }
+    0%   { top: -320px;            opacity: 0; }
     8%   { opacity: 1; }
     92%  { opacity: 0.9; }
-    100% { top: calc(100% + 240px); opacity: 0; }
+    100% { top: calc(100% + 320px); opacity: 0; }
 }
 
 @keyframes pulse-dot {
@@ -855,7 +857,7 @@ img {
     .profile-info-row .label {
         font-weight: 600;
         color: var(--primary);
-        min-width: 80px;
+        min-width: 120px;
         flex: 0 0 auto;
     }
 
@@ -965,8 +967,6 @@ img {
 }
 
     .org-box:hover {
-        box-shadow: 0 8px 28px rgba(107,168,50,0.22), 0 2px 8px rgba(0,0,0,0.10);
-        transform: translateY(-2px);
     }
 
 /* Location / Map */
