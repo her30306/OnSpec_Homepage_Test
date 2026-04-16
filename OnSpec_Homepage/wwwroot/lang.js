@@ -33,10 +33,12 @@ var TRANSLATIONS = {
         'overview-p':         '다양한 산업 분야에 최적화된 Vision 검사 솔루션을 제공합니다.',
         'card-battery':       '2차전지 전극공정·조립공정·모듈공정의 표면검사 및 치수측정 Vision 시스템',
         'card-pcb':           '인쇄 회로 기판 패턴 검사기(AOI), 외관 검사기(AVI), Roll to Roll 검사 시스템',
-        'card-camera':        'Camera Module 외관검사기, 6면 동시검사, Laser Module 및 Lens 검사기',
+        'card-camera':        'Camera Module 외관검사기, Laser Module 및 Lens 검사기',
         'card-display':       'COF/S-IC Reel to Reel AFVI, TSP AOI, 투명 ITO 패턴 AOI, OLED FMM AOI/AVI',
         'card-more':          '더 보기',
+        'stat-experience-u':  '년+',
         'stat-experience':    '기술 경험',
+        'stat-business-u':    '개',
         'stat-business':      '핵심 사업분야',
         'stat-battery':       '배터리 전공정 검사',
         'stat-ai':            '딥러닝 검사 솔루션',
@@ -58,12 +60,16 @@ var TRANSLATIONS = {
         'biz-h3-features':  '핵심 기술',
 
         /* ── Contact label ── */
-        'label-contact':  '연락처',
+        'label-tel':      '전화',
+        'label-fax':      '팩스',
+        'label-contact':  '메일',
 
         /* ── about.html ── */
         'profile-intro':      '㈜온스펙은 2006년부터 20년간 Vision 검사 분야에서 경험을 쌓아온 전문가들이 모여 설립한 기업으로 광학설계, S/W개발, 딥러닝을 이용한 Total 검사 솔루션 제공을 통해 고객의 가치에 기여하고자 합니다.',
         'label-company':      '업체명',
+        'value-company':      '㈜온스펙',
         'label-ceo':          '대표이사',
+        'value-ceo':          '이관석',
         'label-address':      '주소',
         'value-address':      '경기도 화성시 봉담읍 동화길51, 6층 669호',
         'org-ceo':            '대표이사',
@@ -92,12 +98,12 @@ var TRANSLATIONS = {
 
         /* ── business.html – Camera ── */
         'biz-camera-m1': 'Camera Module 외관검사기',
-        'biz-camera-m2': 'Camera Module 6면 외관검사기',
+        //'biz-camera-m2': 'Camera Module 6면 외관검사기',
         'biz-camera-m3': 'Laser Module 외관검사기',
         'biz-camera-m4': 'Lens 외관검사기',
         'biz-camera-f1': 'Index Type 검사 Stage 구성으로 초고속 검사 구현',
-        'biz-camera-f2': 'Mirror를 이용하여 Camera Module 5면 동시검사 (상면+Side 4면)',
-        'biz-camera-f3': '액체렌즈 적용으로 제품 심도 변화 대응 및 다초점 검사 가능',
+        //'biz-camera-f2': 'Mirror를 이용하여 Camera Module 5면 동시검사 (상면+Side 4면)',
+        //'biz-camera-f3': '액체렌즈 적용으로 제품 심도 변화 대응 및 다초점 검사 가능',
         'biz-camera-f4': 'Photometric 원리를 이용하여 외관 불량 시인성 향상',
         'biz-camera-f5': '10G망 적용으로 초고속 Deep-Learning 검사 결과 제공',
 
@@ -139,10 +145,12 @@ var TRANSLATIONS = {
         'overview-p':         'We provide optimized Vision inspection solutions across diverse industries.',
         'card-battery':       'Vision systems for surface inspection and dimensional measurement in battery electrode, assembly, and module processes.',
         'card-pcb':           'PCB pattern inspection (AOI), appearance inspection (AVI), and Roll to Roll inspection systems.',
-        'card-camera':        'Camera Module appearance inspection, 6-sided simultaneous inspection, Laser Module and Lens inspection.',
+        'card-camera':        'Camera Module appearance inspection, Laser Module and Lens inspection.',
         'card-display':       'COF/S-IC Reel to Reel AFVI, TSP AOI, Transparent ITO Pattern AOI, OLED FMM AOI/AVI.',
         'card-more':          'Learn More',
+        'stat-experience-u':  '+',
         'stat-experience':    'Years of Expertise',
+        'stat-business-u':    '',
         'stat-business':      'Core Business Areas',
         'stat-battery':       'Full Battery Process',
         'stat-ai':            'Deep Learning Solution',
@@ -164,12 +172,16 @@ var TRANSLATIONS = {
         'biz-h3-features':  'Core Technologies',
 
         /* ── Contact label ── */
-        'label-contact':  'Contact',
+        'label-tel':      'TEL',
+        'label-fax':      'FAX',
+        'label-contact':  'MAIL',
 
         /* ── about.html ── */
         'profile-intro':      'OnSpec Co., Ltd. was founded by experts with 20 years of experience in the Vision inspection field since 2006. We aim to contribute to customer value by providing Total inspection solutions encompassing optical design, S/W development, and deep learning.',
         'label-company':      'Company Name',
+        'value-company':      'On-Spec Inc.',
         'label-ceo':          'CEO',
+        'value-ceo':          'KWANSEOK LEE',
         'label-address':      'Address',
         'value-address':      '669, 6F, 51 Donghwa-gil, Bongdam-eup, Hwaseong-si, Gyeonggi-do',
         'org-ceo':            'CEO',
@@ -198,12 +210,12 @@ var TRANSLATIONS = {
 
         /* ── business.html – Camera ── */
         'biz-camera-m1': 'Camera Module appearance inspection system',
-        'biz-camera-m2': 'Camera Module 6-sided appearance inspection system',
+        //'biz-camera-m2': 'Camera Module 6-sided appearance inspection system',
         'biz-camera-m3': 'Laser Module appearance inspection system',
         'biz-camera-m4': 'Lens appearance inspection system',
         'biz-camera-f1': 'Ultra-high-speed inspection with Index Type inspection stage configuration',
-        'biz-camera-f2': 'Simultaneous 5-sided Camera Module inspection using mirrors (top + 4 sides)',
-        'biz-camera-f3': 'Liquid lens application for product depth variation and multi-focus inspection',
+        //'biz-camera-f2': 'Simultaneous 5-sided Camera Module inspection using mirrors (top + 4 sides)',
+        //'biz-camera-f3': 'Liquid lens application for product depth variation and multi-focus inspection',
         'biz-camera-f4': 'Enhanced appearance defect visibility using Photometric principles',
         'biz-camera-f5': 'Ultra-fast Deep Learning inspection results provided via 10G network',
 
