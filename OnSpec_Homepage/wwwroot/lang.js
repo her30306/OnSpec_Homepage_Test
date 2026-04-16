@@ -19,7 +19,7 @@ var TRANSLATIONS = {
         'menu-aria':      '메뉴 열기',
 
         /* ── Footer ── */
-        'footer-addr': '㈜온스펙 &nbsp;|&nbsp; 경기도 화성시 봉담읍 동화길51, 6층 669호',
+        'footer-addr': '㈜온스펙 &nbsp;|&nbsp; 경기도 화성시 효행구 봉담읍 동화길 51, 6층 669호',
         'footer-tel':  'TEL : 000-0000-0000 &nbsp;|&nbsp; kslee@on-spec.co.kr',
 
         /* ── index.html ── */
@@ -71,13 +71,13 @@ var TRANSLATIONS = {
         'label-ceo':          '대표이사',
         'value-ceo':          '이관석',
         'label-address':      '주소',
-        'value-address':      '경기도 화성시 봉담읍 동화길51, 6층 669호',
+        'value-address':      '경기도 화성시 효행구 봉담읍 동화길 51, 6층 669호',
         'org-ceo':            '대표이사',
         'org-sw':             'S/W 개발팀',
         'org-system':         '시스템 설계팀',
         'org-support':        '기술지원팀',
         'org-sales':          '영업팀',
-        'map-address':        '경기도 화성시 봉담읍 동화길51, 6층 669호',
+        'map-address':        '경기도 화성시 효행구 봉담읍 동화길 51, 6층 669호',
         'kakao-confirm':      '카카오 맵으로 이동할까요?',
 
         /* ── business.html – Battery ── */
@@ -131,7 +131,7 @@ var TRANSLATIONS = {
         'menu-aria':      'Open menu',
 
         /* ── Footer ── */
-        'footer-addr': 'OnSpec Co., Ltd. &nbsp;|&nbsp; 669, 6F, 51 Donghwa-gil, Bongdam-eup, Hwaseong-si, Gyeonggi-do',
+        'footer-addr': 'OnSpec Co., Ltd. &nbsp;|&nbsp; 669, 6F, 51 Donghwa-gil, Bongdam-eup, Hyohang-gu, Hwaseong-si, Gyeonggi-do, Republic of Korea',
         'footer-tel':  'TEL : 000-0000-0000 &nbsp;|&nbsp; kslee@on-spec.co.kr',
 
         /* ── index.html ── */
@@ -183,13 +183,13 @@ var TRANSLATIONS = {
         'label-ceo':          'CEO',
         'value-ceo':          'KWANSEOK LEE',
         'label-address':      'Address',
-        'value-address':      '669, 6F, 51 Donghwa-gil, Bongdam-eup, Hwaseong-si, Gyeonggi-do',
+        'value-address':      '669, 6F, 51, Donghwa-gil, Bongdam-eup, Hyohang-gu, Hwaseong-si, Gyeonggi-do, Republic of Korea',
         'org-ceo':            'CEO',
         'org-sw':             'S/W Development',
         'org-system':         'System Design',
         'org-support':        'Technical Support',
         'org-sales':          'Sales',
-        'map-address':        '669, 6F, 51 Donghwa-gil, Bongdam-eup, Hwaseong-si, Gyeonggi-do',
+        'map-address':        '669, 6F, 51, Donghwa-gil, Bongdam-eup, Hyohang-gu, Hwaseong-si, Gyeonggi-do, Republic of Korea',
         'kakao-confirm':      'Open in Kakao Maps?',
 
         /* ── business.html – Battery ── */
