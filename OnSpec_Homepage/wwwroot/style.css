@@ -1333,6 +1333,11 @@ img {
     .biz-image img {
         height: 200px;
     }
+    
+    .card-arrow {
+        opacity: 1;
+        transform: translateX(0);
+    }
 
     .sub-nav ul {
         padding: 0 12px;

@@ -20,7 +20,7 @@ var TRANSLATIONS = {
 
         /* ── Footer ── */
         'footer-addr': '㈜온스펙 &nbsp;|&nbsp; 경기도 화성시 효행구 봉담읍 동화길 51, 6층 669호',
-        'footer-tel':  'TEL : 000-0000-0000 &nbsp;|&nbsp; kslee@on-spec.co.kr',
+        'footer-tel':  'TEL : 070-4277-2603 &nbsp;|&nbsp; kslee@on-spec.co.kr',
 
         /* ── index.html ── */
         'hero-badge':         '20년 Vision 검사 기술력',
@@ -61,6 +61,7 @@ var TRANSLATIONS = {
 
         /* ── Contact label ── */
         'label-tel':      '전화',
+        'value-tel':      '070-4277-2603',
         //'label-fax':      '팩스',
         'label-contact':  '메일',
 
@@ -121,9 +122,9 @@ var TRANSLATIONS = {
 
     en: {
         /* ── Page titles ── */
-        'title-index':    'OnSpec Co., Ltd. - Vision Inspection Total Solution',
-        'title-about':    'About Us - OnSpec Co., Ltd.',
-        'title-business': 'Business - OnSpec Co., Ltd.',
+        'title-index':    'On-Spec Inc. - Vision Inspection Total Solution',
+        'title-about':    'About Us - On-Spec Inc.',
+        'title-business': 'Business - On-Spec Inc.',
 
         /* ── Header / Nav ── */
         'nav-about':      'About Us',
@@ -131,13 +132,13 @@ var TRANSLATIONS = {
         'menu-aria':      'Open menu',
 
         /* ── Footer ── */
-        'footer-addr': 'OnSpec Co., Ltd. &nbsp;|&nbsp; 669, 6F, 51 Donghwa-gil, Bongdam-eup, Hyohang-gu, Hwaseong-si, Gyeonggi-do, Republic of Korea',
-        'footer-tel':  'TEL : 000-0000-0000 &nbsp;|&nbsp; kslee@on-spec.co.kr',
+        'footer-addr': 'On-Spec Inc. &nbsp;|&nbsp; 669, 6F, 51 Donghwa-gil, Bongdam-eup, Hyohang-gu, Hwaseong-si, Gyeonggi-do, Republic of Korea',
+        'footer-tel':  'TEL : +82-70-4277-2603 &nbsp;|&nbsp; kslee@on-spec.co.kr',
 
         /* ── index.html ── */
         'hero-badge':         '20 Years of Vision Inspection',
         'hero-title':         'Vision Inspection <em>Total Solution</em><br>Specialist',
-        'hero-desc':          'OnSpec Co., Ltd., built on 20 years of expertise in Vision inspection field since 2006,<br>provides Total inspection solutions spanning optical design, S/W development, and deep learning.',
+        'hero-desc':          'Built on 20 years of vision inspection expertise since 2006,<br>On-Spec Inc. delivers total solutions spanning optical design, S/W development, and deep learning.',
         'hero-btn-about':     'About Us',
         'hero-btn-business':  'View Business',
         'overview-tag':       'Business Areas',
@@ -173,11 +174,12 @@ var TRANSLATIONS = {
 
         /* ── Contact label ── */
         'label-tel':      'TEL',
+        'value-tel':      '+82-70-4277-2603',
         //'label-fax':      'FAX',
         'label-contact':  'MAIL',
 
         /* ── about.html ── */
-        'profile-intro':      'OnSpec Co., Ltd. was founded by experts with 20 years of experience in the Vision inspection field since 2006. We aim to contribute to customer value by providing Total inspection solutions encompassing optical design, S/W development, and deep learning.',
+        'profile-intro':      'On-Spec Inc. was founded by experts who have led the vision inspection field since 2006. With 20 years of deep-rooted expertise, we provide total inspection solutions encompassing optical design, S/W development, and deep learning to drive customer value.',
         'label-company':      'Company Name',
         'value-company':      'On-Spec Inc.',
         'label-ceo':          'CEO',
