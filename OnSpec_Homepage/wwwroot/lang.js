@@ -95,7 +95,7 @@ var TRANSLATIONS = {
         'biz-pcb-m2': 'PCB, FPCB 인쇄 회로 기판 외관 검사기 (AVI)',
         'biz-pcb-m3': 'FPCB Roll to Roll 패턴 검사기 (RTR AOI &amp; VRS)',
         'biz-pcb-f1': 'Global Points Transformation 방식으로, 제품의 War-page 및 수축/팽창 등의 다양한 변형에 의한 미/과검 대응',
-        'biz-pcb-f2': '자체 CAM Software로 Gerber, RS-274x, ODB++ 등 모든 Data Format 지원 및 레시피 생성 용이',
+        'biz-pcb-f2': '자체 CAM Software로 Gerber Data Format 지원 및 레시피 생성 용이',
 
         /* ── business.html – Camera ── */
         'biz-camera-m1': 'Camera Module 외관검사기',
@@ -208,7 +208,7 @@ var TRANSLATIONS = {
         'biz-pcb-m2': 'PCB, FPCB printed circuit board appearance inspection system (AVI)',
         'biz-pcb-m3': 'FPCB Roll to Roll pattern inspection system (RTR AOI &amp; VRS)',
         'biz-pcb-f1': 'Global Points Transformation method to handle various deformations such as warpage and expansion/contraction, reducing false positives',
-        'biz-pcb-f2': 'In-house CAM Software supports all data formats including Gerber, RS-274x, ODB++ with easy recipe creation',
+        'biz-pcb-f2': 'Proprietary CAM software featuring Gerber data support and easy recipe generation',
 
         /* ── business.html – Camera ── */
         'biz-camera-m1': 'Camera Module appearance inspection system',
